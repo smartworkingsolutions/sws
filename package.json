@@ -1,0 +1,24 @@
+{
+  "name": "sws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "postcss tailwind.css -o css/theme.css -w --verbose",
+    "prod": "NODE_ENV=production postcss tailwind.css -o css/theme.css"
+  },
+  "author": "Sajid Khan (https://mesajid.com/)",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.15",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3"
+  }
+}

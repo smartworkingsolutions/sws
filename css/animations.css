@@ -1,0 +1,74 @@
+/* Animation Line */
+.animate-line {
+	display: inline;
+	background-size: 0px 2px;
+	background-position: 0px 100%;
+	background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+	background-repeat: no-repeat;
+	transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+}
+.animate-line:hover {
+	background-size: 100% 2px;
+}
+
+/* Animation Flip */
+.animate-flip {
+    perspective: 1000px;
+}
+
+.animate-flip span {
+	@apply relative inline-block p-0; 
+	transition: transform 0.3s;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d;
+}
+.animate-flip span:before {
+	@apply absolute top-full left-0 w-full h-full text-center;
+	content: attr(data-hover);
+	transition: color 0.3s;
+	transform: rotateX(-90deg);
+	transform-origin: 50% 0;
+}
+
+.animate-flip:hover span,
+.animate-flip:focus span {
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+.animate-flip:hover span:before,
+.animate-flip:focus span:before {
+	@apply text-white;
+}
+
+/* Animation Blink */
+@keyframes blink {
+	0%  { background-color: #ccc; }
+	49% { background-color: #ccc; }
+	50% { background-color: transparent; }
+	99% { background-color: transparent; }
+	100%  { background-color: #ccc; }
+}
+.animate-blink {
+	display: inline-block;
+	background-color: #ccc;
+	margin-left: 0.1rem;
+	width: 3px;
+	animation: blink 1s infinite;
+}
+
+/* Marquee */
+@keyframes marquee {
+	0% {
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100% {
+		-moz-transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+}
+.animate-marquee {
+	animation: marquee 20s linear infinite;
+}

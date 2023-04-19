@@ -1,0 +1,62 @@
+@import "css/tailwind-extra";
+@import "css/animations";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--color-body: #ECF1F5;
+		--color-blue-dark: #00017A;
+		--color-blue-medium: #2F2CD6;
+		--color-blue-light: #5956FF;
+		--color-dark: #040524;
+		/* --color-light: #f5f5fa; */
+		--color-border: #ECF1F5;
+		--color-text: #040524;
+	}
+	[type='text'],
+	[type='email'],
+	[type='url'],
+	[type='password'],
+	[type='number'],
+	[type='date'],
+	[type='datetime-local'],
+	[type='month'],
+	[type='search'],
+	[type='tel'],
+	[type='time'],
+	[type='week'],
+	[multiple],
+	textarea,
+	select {
+		@apply w-full border-text-color focus:border-blue-dark focus:outline-none focus:ring-blue-dark placeholder:text-text-color text-text-color rounded-md py-3;
+	}
+	label {
+		@apply text-text-color;
+	}
+}
+@layer components {
+    .button {
+		@apply inline-flex justify-center items-center gap-5 bg-blue-medium hover:bg-blue-dark transition ease-in text-white fill-white text-lg font-bold uppercase rounded-lg px-8 py-[18px] min-w-fit;
+    }
+	.button.button-small {
+		@apply text-sm px-5 py-2.5;
+	}
+	.button svg {
+		@apply transition-all;
+	}
+	.button:hover svg {
+		@apply rotate-45;
+	}
+	.button.button-white {
+		@apply bg-white hover:bg-blue-dark text-text-color hover:text-white;
+	}
+	.button.button-border {
+		@apply bg-white hover:bg-blue-dark text-blue-medium hover:text-white fill-blue-medium hover:fill-white border border-blue-medium hover:border-blue-dark;
+    }
+	.button.button-border:hover svg path {
+		@apply fill-white;
+	}
+}

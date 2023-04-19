@@ -1,0 +1,58 @@
+<?php
+/**
+ * The ACF template part for displaying Hero Banner.
+ *
+ * @package SWS
+ */
+
+$heading    = get_sub_field( 'heading' );
+$subheading = get_sub_field( 'sub_heading' );
+$btn        = get_sub_field( 'button' );
+$profiles   = get_sub_field( 'add_profiles' );
+
+if ( ! is_front_page() ) {
+	$heading = esc_html__( 'Hire Best-in-Class Remote ', 'sws' ) . get_the_title();
+}
+?>
+
+<section class="w-full max-h-[722px] relative">
+	<?php
+	if ( $profiles ) {
+		echo '<div class="w-full grid grid-cols-2 lg:grid-cols-4">';
+		foreach ( $profiles as $profile ) {
+			printf(
+				'<div class="hero-images | relative group">
+					<div class="bg-text-color absolute inset-0 group-hover:opacity-30 transition-opacity duration-1000"></div>
+					<img class="w-full" src="%s" alt="Profile pic">
+				</div>',
+				wp_kses_post( $profile )
+			);
+		}
+		echo '</div>';
+	}
+
+	if ( $heading || $subheading || $btn ) {
+		echo '<div class="container text-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10">';
+		echo '<div class="grid gap-10">';
+
+		if ( $heading ) {
+			echo '<h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">' . wp_kses_post( $heading ) . '</h1>';
+		}
+		if ( $subheading ) {
+			echo '<p class="text-white/80">' . wp_kses_post( $subheading ) . '</p>';
+		}
+		if ( $btn ) {
+			printf(
+				'<div><a href="%s" class="button" target="%s">%s%s</a></div>',
+				esc_url( $btn['url'] ),
+				esc_html( $btn['target'] ),
+				esc_html( $btn['title'] ),
+				get_svg( 'icons/button-arrow', false ) // phpcs:ignore
+			);
+		}
+		echo '</div>';
+		echo '</div>';
+	}
+	?>
+
+</section>

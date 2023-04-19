@@ -1,0 +1,165 @@
+html,
+body {
+    @apply scroll-smooth;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    @apply bg-body text-text-color;
+}
+
+a {
+    @apply transition ease-linear;
+}
+section {
+    @apply overflow-hidden;
+}
+p {
+    @apply text-text-color text-22 font-medium;
+}
+p.small {
+    @apply text-base;
+}
+
+.sub-menu::before {
+    @apply content-[''] bg-transparent w-full h-8 absolute -top-8 left-0;
+}
+.mobile-menu-wrapper .close,
+.mobile-menu-wrapper.menu-open .open {
+    @apply hidden;
+}
+.mobile-menu-wrapper.menu-open .close {
+    @apply block;
+}
+.slide-close {
+    @apply -mr-96;
+}
+
+/* Search box */
+.search-box {
+    @apply absolute inset-0 z-10 -translate-y-72;
+}
+.search-box-open {
+    @apply w-full translate-y-0;
+}
+
+/* Slider */
+/* .hero-slider .slick-track {
+    @apply grid xl:grid-cols-3 gap-8;
+} */
+.profile-slider .slick-slide,
+.testimonial-slider .slick-slide,
+.clients-slider .slick-slide {
+    @apply mx-4;
+}
+.profile-slider .slick-list,
+.testimonial-slider .slick-list,
+.clients-slider .slick-list {
+    @apply -mx-4;
+}
+
+/* Util */
+.plc {
+    @apply pl-6 4xl:pl-20 2xl:pl-16 lg:pl-10;
+}
+#sortbox:checked ~ #sortboxmenu {
+    @apply opacity-100 z-10;
+}
+#sortbox:checked + label svg {
+    @apply rotate-180 delay-75;
+}
+.slash::after {
+    @apply sm:content-['|'] last:sm:content-[''] sm:mx-2;
+}
+.slash:last-of-type:after {
+    @apply sm:content-[''] sm:mx-1;
+}
+.wysiwyg-editor {
+    @apply grid;
+}
+.wysiwyg-editor.white-bg,
+.wysiwyg-editor.white-bg h1,
+.wysiwyg-editor.white-bg h2,
+.wysiwyg-editor.white-bg h3,
+.wysiwyg-editor.white-bg h4,
+.wysiwyg-editor.white-bg h5,
+.wysiwyg-editor.white-bg h6,
+.wysiwyg-editor.white-bg p {
+    @apply text-white;
+}
+.wysiwyg-editor.white-bg h1,
+.wysiwyg-editor.white-bg h2,
+.wysiwyg-editor.white-bg h3,
+.wysiwyg-editor.white-bg h4,
+.wysiwyg-editor.white-bg h5,
+.wysiwyg-editor.white-bg h6 {
+    @apply mb-3;
+}
+.wysiwyg-editor h1,
+.wysiwyg-editor h2,
+.wysiwyg-editor h3,
+.wysiwyg-editor h4,
+.wysiwyg-editor h5,
+.wysiwyg-editor h6 {
+    @apply text-text-color font-medium leading-[1.1];
+}
+.wysiwyg-editor h1 {
+    @apply text-32 lg:text-6xl;
+}
+.wysiwyg-editor h2 {
+    @apply text-32 lg:text-58;
+}
+.wysiwyg-editor h3 {
+    @apply text-32 lg:text-5xl;
+}
+.wysiwyg-editor h4 {
+    @apply text-32 lg:text-4xl;
+}
+.wysiwyg-editor h5 {
+    @apply text-32;
+}
+.wysiwyg-editor h6 {
+    @apply text-3xl;
+}
+.wysiwyg-editor blockquote {
+    @apply font-medium italic border-l-8 border-blue-dark pl-8 py-5;
+}
+.wysiwyg-editor ul,
+.wysiwyg-editor ol {
+    @apply text-lg font-semibold;
+}
+.wysiwyg-editor ul {
+    @apply list-disc list-inside;
+}
+.wysiwyg-editor ol {
+    @apply list-decimal list-inside;
+}
+.wysiwyg-editor ul li,
+.wysiwyg-editor ol li {
+    @apply text-blue-dark pl-4 my-3 leading-snug relative;
+}
+.wysiwyg-editor.exp ul,
+.wysiwyg-editor.exp ol {
+    @apply grid gap-2.5 list-none;
+}
+.wysiwyg-editor.exp ul li,
+.wysiwyg-editor.exp ol li {
+    @apply text-text-color font-medium relative my-0;
+}
+/* .wysiwyg-editor ul li::before,
+.wysiwyg-editor ol li::before {
+    @apply content-[''] w-1 h-5 bg-blue-medium absolute left-0 top-0;
+} */
+.wysiwyg-editor.exp ul li::before,
+.wysiwyg-editor.exp ol li::before {
+    @apply content-['#'] text-xs font-extrabold absolute left-0 top-1/2 -translate-y-1/2;
+}
+
+.wysiwyg-editor.footer a {
+    @apply hover:text-blue-medium;
+}
+.wysiwyg-editor.footer p {
+    @apply text-base mb-4;
+}
+.wysiwyg-editor.footer h3 {
+    @apply text-base font-bold mb-1;
+}
