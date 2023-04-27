@@ -45,7 +45,7 @@ $rating_text  = get_sub_field( 'rating_text' );
 
 		// Rating.
 		if ( $rating_title || $rating_text ) {
-			echo '<div class="xl:col-span-3 bg-white px-7 py-8 flex flex-col justify-between gap-4 text-text-color rounded-20">';
+			echo '<div class="xl:col-span-3 bg-white px-7 py-8 flex flex-col justify-center gap-4 text-text-color rounded-20">';
 			if ( $rating_title ) {
 				echo '<h2 class="text-5xl xl:text-8xl font-bold leading-none">' . wp_kses_post( $rating_title ) . '</h2>';
 			}

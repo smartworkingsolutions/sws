@@ -14,7 +14,7 @@ $text    = get_field( 'error_content', 'option' );
 $btn     = get_field( 'error_button', 'option' );
 ?>
 
-<section class="mt-20">
+<section class="my-20">
 	<div class="container">
 
 		<div class="text-center">
@@ -30,7 +30,6 @@ $btn     = get_field( 'error_button', 'option' );
 			if ( $text ) {
 				echo '<p class="max-w-3xl mx-auto">' . wp_kses_post( $text ) . '</p>';
 			}
-
 			if ( $btn ) {
 				printf(
 					'<a href="%s" class="button mt-10" target="%s">%s</a>',

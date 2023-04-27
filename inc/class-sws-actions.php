@@ -38,7 +38,7 @@ class SWS_Actions {
 		<section class="w-full bg-text-color text-white py-10 text-center">
 			<div class="container">
 				<h1 class="text-5xl font-medium">
-					<?php echo esc_html( $this->get_custom_title() ); ?>
+					<?php echo wp_kses_post( $this->get_custom_title() ); ?>
 				</h1>
 			</div>
 		</section>
@@ -57,6 +57,14 @@ class SWS_Actions {
 		}
 		if ( is_page() ) {
 			$output = wp_kses_post( get_the_title( get_the_id() ) );
+		}
+		if ( is_search() ) {
+			// translators: Heading for search page.
+			$output = sprintf( __( 'Search Results for: %s', 'sws' ), '<span>' . get_search_query() . '</span>' );
+
+		}
+		if ( is_404() ) {
+			$output = __( '404: Page not found', 'sws' );
 		}
 
 		return $output;

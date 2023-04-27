@@ -199,6 +199,7 @@ require get_template_directory() . '/inc/customizer.php';
  * All classes here
  */
 require get_template_directory() . '/inc/class-sws-menu-walker.php';
+require get_template_directory() . '/inc/class-custom-pagination.php';
 require get_template_directory() . '/inc/class-sws-actions.php';
 require get_template_directory() . '/inc/class-custom-post-types.php';
 require get_template_directory() . '/inc/class-svg-enable.php';

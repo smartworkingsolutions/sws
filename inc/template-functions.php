@@ -61,14 +61,3 @@ function get_svg( $path, $echo = true ) {
 		return $svg;
 	}
 }
-
-/**
- * Remove 'Category:', 'Tag:', 'Author:', 'Archives:' and Other 'taxonomy name:' in the archive title
- *
- * @param string $title default title.
- * @return $title       modified title.
- */
-function archive_remove_title_prefix( $title ) {
-	return preg_replace( '/^\w+: /', '', $title );
-}
-add_filter( 'get_the_archive_title', 'archive_remove_title_prefix' );
