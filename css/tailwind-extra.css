@@ -120,8 +120,9 @@ p.small {
 .wysiwyg-editor h6 {
     @apply text-3xl;
 }
-.wysiwyg-editor blockquote {
-    @apply font-medium italic border-l-8 border-blue-dark pl-8 py-5;
+.wysiwyg-editor blockquote,
+.wysiwyg-editor blockquote p {
+    @apply text-32 font-medium italic py-5 text-center;
 }
 .wysiwyg-editor ul,
 .wysiwyg-editor ol {

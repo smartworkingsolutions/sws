@@ -6,6 +6,7 @@
             "key": "field_6226256b87871",
             "label": "Widget 1",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_63824e62e4288",
             "label": "Footer Logo Image",
             "name": "",
+            "aria-label": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -39,6 +41,7 @@
             "key": "field_64363869114f2",
             "label": "Address",
             "name": "address",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -58,6 +61,7 @@
             "key": "field_64363f0d114f3",
             "label": "Email",
             "name": "email",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -77,6 +81,7 @@
             "key": "field_643643af114f4",
             "label": "Phone numbers",
             "name": "phone_numbers",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -96,6 +101,7 @@
             "key": "field_64364417114f5",
             "label": "Other info",
             "name": "other_info",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -115,6 +121,7 @@
             "key": "field_6226281b87875",
             "label": "Widget 2",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -131,6 +138,7 @@
             "key": "field_6226282487876",
             "label": "Heading",
             "name": "fw2_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -150,6 +158,7 @@
             "key": "field_62262aa1b8452",
             "label": "Links",
             "name": "fw2_links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -159,16 +168,21 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "acfe_save_meta": 0,
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "collapsed": "",
+            "button_label": "Add Link",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_62262acbb8454",
                     "label": "Link",
                     "name": "fw2_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -178,7 +192,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_62262aa1b8452"
                 }
             ]
         },
@@ -186,6 +201,7 @@
             "key": "field_62262b0fbaa0a",
             "label": "Widget 3",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -202,6 +218,7 @@
             "key": "field_62262b1cbaa0b",
             "label": "Heading",
             "name": "fw3_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -221,6 +238,7 @@
             "key": "field_63806591ed5d3",
             "label": "Links",
             "name": "fw3_links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -230,16 +248,21 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "acfe_save_meta": 0,
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "collapsed": "",
+            "button_label": "Add Link",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_63806592ed5d4",
                     "label": "Link",
                     "name": "fw3_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -249,7 +272,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_63806591ed5d3"
                 }
             ]
         },
@@ -257,6 +281,7 @@
             "key": "field_62273c030a780",
             "label": "Copyrights",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -273,6 +298,7 @@
             "key": "field_6424e6e70810d",
             "label": "Links",
             "name": "c_links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -282,16 +308,21 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "acfe_save_meta": 0,
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "collapsed": "",
+            "button_label": "Add Link",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_6424e6e70810e",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -301,7 +332,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_6424e6e70810d"
                 }
             ]
         }
@@ -324,5 +356,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1681278090
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1682714692
 }

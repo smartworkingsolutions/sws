@@ -213,18 +213,24 @@ require get_template_directory() . '/inc/class-acf-options-panel.php';
  * Update settings from options.
  */
 function add_theme_options() {
-	// $primary_color   = get_field( 'primary_color', 'options' );
-	// $secondary_color = get_field( 'secondary_color', 'options' );
-	// $dark_color      = get_field( 'dark_color', 'options' );
-	// $light_color     = get_field( 'light_color', 'options' );
+	$body_color   = get_field( 'body_color', 'options' );
+	$color_1      = get_field( 'color_1', 'options' );
+	$color_2      = get_field( 'color_2', 'options' );
+	$color_3      = get_field( 'color_3', 'options' );
+	$color_4      = get_field( 'color_4', 'options' );
+	$border_color = get_field( 'border_color', 'options' );
+	$text_color   = get_field( 'text_color', 'options' );
 	?>
 	<style>
-		/* :root {
-			--color-primary: <?php echo esc_html( $primary_color ); ?>;
-			--color-secondary: <?php echo esc_html( $secondary_color ); ?>;
-			--color-dark: <?php echo esc_html( $dark_color ); ?>;
-			--color-light: <?php echo esc_html( $light_color ); ?>;
-		} */
+		:root {
+			--color-body: <?php echo $body_color ? esc_html( $body_color ) : '#ECF1F5'; ?>;
+			--color-blue-dark: <?php echo $color_1 ? esc_html( $color_1 ) : '#00017A'; ?>;
+			--color-blue-medium: <?php echo $color_2 ? esc_html( $color_2 ) : '#2F2CD6'; ?>;
+			--color-blue-light: <?php echo $color_3 ? esc_html( $color_3 ) : '#5956FF'; ?>;
+			--color-dark: <?php echo $color_4 ? esc_html( $color_4 ) : '#040524'; ?>;
+			--color-border: <?php echo $border_color ? esc_html( $border_color ) : '#ECF1F5'; ?>;
+			--color-text: <?php echo $text_color ? esc_html( $text_color ) : '#040524'; ?>;
+		}
 	</style>
 	<?php
 }

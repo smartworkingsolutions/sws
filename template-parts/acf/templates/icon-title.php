@@ -17,7 +17,7 @@ if ( ! is_front_page() ) {
 
 	<?php
 	if ( $heading ) {
-		echo '<h2 class="text-3xl 4xl:text-[32px] leading-tight font-bold text-dark-color">' . wp_kses_post( $heading ) . '</h2>';
+		echo '<h2 class="text-3xl 4xl:text-[32px] leading-tight font-bold text-text-color">' . wp_kses_post( $heading ) . '</h2>';
 	}
 
 	if ( have_rows( 'add_content' ) ) :
@@ -47,7 +47,7 @@ if ( ! is_front_page() ) {
 				'<div class="flex items-center gap-5">
 					%s
                     <div>
-                        <h3 class="text-2xl font-bold text-dark-color">%s</h3>
+                        <h3 class="text-2xl font-bold text-text-color">%s</h3>
                     </div>
 				</div>',
 				wp_kses_post( $icon_html ),

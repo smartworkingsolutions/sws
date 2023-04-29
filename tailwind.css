@@ -38,7 +38,7 @@
 }
 @layer components {
     .button {
-		@apply inline-flex justify-center items-center gap-5 bg-blue-medium hover:bg-blue-dark transition ease-in text-white fill-white text-lg font-bold uppercase rounded-lg px-8 py-[18px] min-w-fit;
+		@apply inline-flex justify-center items-center gap-5 bg-blue-medium hover:bg-dark-color transition ease-in text-white fill-white text-lg font-bold uppercase rounded-lg px-8 py-[18px] min-w-fit;
     }
 	.button.button-small {
 		@apply text-sm px-5 py-2.5;
@@ -50,10 +50,10 @@
 		@apply rotate-45;
 	}
 	.button.button-white {
-		@apply bg-white hover:bg-blue-dark text-text-color hover:text-white;
+		@apply bg-white hover:bg-dark-color text-text-color hover:text-white;
 	}
 	.button.button-border {
-		@apply bg-white hover:bg-blue-dark text-blue-medium hover:text-white fill-blue-medium hover:fill-white border border-blue-medium hover:border-blue-dark;
+		@apply bg-white hover:bg-dark-color text-blue-medium hover:text-white fill-blue-medium hover:fill-white border border-blue-medium hover:border-dark-color;
     }
 	.button.button-border:hover svg path {
 		@apply fill-white;

@@ -112,7 +112,7 @@ if ( ! $heading && ! $members ) {
 				</div>
 				<?php
 				printf(
-					'<a class="flex justify-center items-center gap-5 text-text-color text-lg font-bold uppercase border-t border-border-color hover:bg-blue-dark hover:text-white hover:fill-white rounded-b-20 px-7 py-5 mt-5" href="https://calendly.com/alexsmartworking">%s%s</a>',
+					'<a class="flex justify-center items-center gap-5 text-text-color text-lg font-bold uppercase border-t border-border-color hover:bg-dark-color hover:text-white fill-text-color hover:fill-white rounded-b-20 px-7 py-5 mt-5" href="https://calendly.com/alexsmartworking">%s%s</a>',
 					esc_html__( 'Get Started', 'sws' ),
 					get_svg( 'icons/button-arrow', false ) // phpcs:ignore
 				);

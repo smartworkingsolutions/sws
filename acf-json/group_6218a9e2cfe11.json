@@ -1086,10 +1086,55 @@
                 },
                 "layout_6433e0fd6808d": {
                     "key": "layout_6433e0fd6808d",
-                    "name": "team_cards",
-                    "label": "Team Cards",
+                    "name": "cards",
+                    "label": "Cards",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_644d3054ee46e",
+                            "label": "Columns",
+                            "name": "columns",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "choices": {
+                                "one": "1",
+                                "two": "2"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_644d409f292e9",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
                         {
                             "key": "field_6434d5c4b1335",
                             "label": "Add Cards",
@@ -1104,11 +1149,14 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
+                            "acfe_save_meta": 0,
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "block",
                             "min": 0,
                             "max": 0,
-                            "layout": "block",
+                            "collapsed": "",
                             "button_label": "Add Card",
+                            "rows_per_page": 20,
                             "sub_fields": [
                                 {
                                     "key": "field_6433e1136808e",
@@ -1140,8 +1188,8 @@
                                 },
                                 {
                                     "key": "field_6433e5516808f",
-                                    "label": "Name",
-                                    "name": "name",
+                                    "label": "Title",
+                                    "name": "title",
                                     "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
@@ -1152,19 +1200,20 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_save_meta": 0,
                                     "default_value": "",
+                                    "maxlength": "",
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": "",
                                     "parent_repeater": "field_6434d5c4b1335"
                                 },
                                 {
                                     "key": "field_6433e63068090",
-                                    "label": "Job",
-                                    "name": "job",
+                                    "label": "Text",
+                                    "name": "text",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -1173,11 +1222,13 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_save_meta": 0,
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
+                                    "acfe_textarea_code": 0,
                                     "maxlength": "",
+                                    "rows": 3,
+                                    "placeholder": "",
+                                    "new_lines": "br",
                                     "parent_repeater": "field_6434d5c4b1335"
                                 },
                                 {
@@ -1201,9 +1252,7 @@
                                     "maxlength": "",
                                     "parent_repeater": "field_6434d5c4b1335"
                                 }
-                            ],
-                            "rows_per_page": 20,
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         }
                     ],
                     "min": "",
@@ -1701,7 +1750,12 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1681845853
+    "modified": 1682784450
 }

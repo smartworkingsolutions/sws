@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single case study page.
+ * The template for displaying all single page.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

@@ -32,7 +32,7 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! have_rows( 'add_list
 				<?php
 				if ( $caption ) {
 					printf(
-						'<p class="w-full flex items-center gap-2.5 text-base lg:text-22 bg-white rounded-10 px-5 py-3 absolute top-0">%s%s</p>',
+						'<p class="w-full flex items-center gap-2.5 text-base lg:text-22 bg-white fill-text-color rounded-10 px-5 py-3 absolute top-0">%s%s</p>',
 						get_svg( 'icons/location', false ), // phpcs:ignore
 						esc_html( $caption )
 					);

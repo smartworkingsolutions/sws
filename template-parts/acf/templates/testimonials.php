@@ -62,7 +62,7 @@ if ( ! $testimonials ) {
 			printf(
 				'<a class="text-text-color" href="%1$s">
 					<div class="text-22 border-b border-border-color pb-2.5">%2$s</div>
-					<div class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5">%3$s%4$s</div>
+					<div class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5 fill-text-color">%3$s%4$s</div>
 					
 					<div class="flex justify-between items-center gap-4 mt-9">
 						<div class="grid gap-2.5">

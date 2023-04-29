@@ -15,7 +15,7 @@ $nav = new SWS_Menu_Walker( 'main-menu' );
 
 		<?php theme_logo(); ?>
 
-		<div class="close | grid fill-text-color">
+		<div class="close | grid stroke-text-color">
 			<button><?php get_svg( 'icons/close' ); ?></button>
 		</div>
 	</div>

@@ -6,6 +6,7 @@
             "key": "field_6218b086f118f",
             "label": "Color Scheme",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -20,69 +21,96 @@
         },
         {
             "key": "field_6218b0acf1190",
-            "label": "Primary Color",
-            "name": "primary_color",
+            "label": "Color 1",
+            "name": "color_1",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "#01017B",
+            "acfe_save_meta": 0,
+            "default_value": "#00017A",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644c01200e089",
+            "label": "Color 2",
+            "name": "color_2",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "#2F2CD6",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644c012d0e08a",
+            "label": "Color 3",
+            "name": "color_3",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "#5956FF",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644c013e0e08b",
+            "label": "Color 4",
+            "name": "color_4",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "#040524",
             "enable_opacity": 0,
             "return_format": "string"
         },
         {
             "key": "field_62e12eb7d9328",
-            "label": "Secondary Color",
-            "name": "secondary_color",
+            "label": "Body Color",
+            "name": "body_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "#FF5D33",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_622a0de966965",
-            "label": "Dark Color",
-            "name": "dark_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#242424",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_62fd12c5daba6",
-            "label": "Light Color",
-            "name": "light_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#f5f5fa",
+            "acfe_save_meta": 0,
+            "default_value": "#ECF1F5",
             "enable_opacity": 0,
             "return_format": "string"
         },
@@ -90,16 +118,37 @@
             "key": "field_63824d47c5fe9",
             "label": "Border Color",
             "name": "border_color",
+            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "default_value": "#D3CFCF",
+            "acfe_save_meta": 0,
+            "default_value": "#ECF1F5",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_644c01610e08c",
+            "label": "Text\/Icons Color",
+            "name": "text_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "#040524",
             "enable_opacity": 0,
             "return_format": "string"
         },
@@ -107,6 +156,7 @@
             "key": "field_62fd2934c3c15",
             "label": "404 Page",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -123,6 +173,7 @@
             "key": "field_62fd2948c3c16",
             "label": "Heading",
             "name": "error_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -142,6 +193,7 @@
             "key": "field_62fd2955c3c17",
             "label": "Content",
             "name": "error_content",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -155,12 +207,14 @@
             "placeholder": "",
             "maxlength": "",
             "rows": "",
-            "new_lines": "br"
+            "new_lines": "br",
+            "acfe_textarea_code": 0
         },
         {
             "key": "field_62fd2963c3c18",
             "label": "Button",
             "name": "error_button",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -191,5 +245,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669484062
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1682707867
 }

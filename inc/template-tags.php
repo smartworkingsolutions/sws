@@ -268,7 +268,7 @@ function theme_header_html() {
 			<div class="container relative">
 				<?php get_search_form(); ?>
 				<div class="close absolute top-4 right-8">
-					<button><?php get_svg( 'icons/close' ); ?></button>
+					<button class="stroke-text-color"><?php get_svg( 'icons/close' ); ?></button>
 				</div>
 			</div>
 		</div>
@@ -361,7 +361,7 @@ function theme_back_to_top() {
 	?>
 
 	<!-- Back to top start -->
-	<a href="#top" class="back-to-top | w-14 h-14 place-content-center bg-blue-light hover:bg-blue-dark fill-white rounded-full -rotate-90 fixed right-4 bottom-12 hidden">
+	<a href="#top" class="back-to-top | w-14 h-14 place-content-center bg-blue-light hover:bg-dark-color fill-white rounded-full -rotate-90 fixed right-4 bottom-12 hidden">
 		<?php get_svg( 'icons/button-arrow' ); ?>
 	</a>
 	<!-- Back to top end -->

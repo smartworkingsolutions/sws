@@ -52,7 +52,7 @@ class SWS_Menu_Walker {
 		global $wp;
 		$current_url = home_url( add_query_arg( [], $wp->request ) ) . '/';
 
-		$menu_html = '<ul class="parent | text-dark-color font-medium flex items-center space-x-7">';
+		$menu_html = '<ul class="parent | text-text-color font-medium flex items-center space-x-7">';
 
 		if ( 'mobile' === $loc ) {
 			$menu_html = '<ul class="flex flex-col space-y-6 text-22 font-medium mt-6">';
@@ -75,10 +75,10 @@ class SWS_Menu_Walker {
 				$mobile_submenu = 'text-base space-y-5';
 			}
 			if ( ! empty( $link['children'] ) && is_array( $link['children'] ) && 'mobile' !== $loc ) {
-				$caret = '<span class="group-hover:fill-blue-medium group-hover:rotate-45 transition-all">' . get_svg( 'icons/menu-arrow', false ) . '</span>';
+				$caret = '<span class="fill-text-color group-hover:fill-blue-medium group-hover:rotate-45 transition-all">' . get_svg( 'icons/menu-arrow', false ) . '</span>';
 			}
 			if ( ! empty( $link['children'] ) && is_array( $link['children'] ) && 'mobile' === $loc ) {
-				$caret = '<span class="-rotate-90">' . get_svg( 'icons/menu-arrow', false ) . '</span>';
+				$caret = '<span class="fill-text-color -rotate-90">' . get_svg( 'icons/menu-arrow', false ) . '</span>';
 			}
 
 			$target = '';
