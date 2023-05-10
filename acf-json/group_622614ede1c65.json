@@ -295,6 +295,28 @@
             "endpoint": 0
         },
         {
+            "key": "field_64529f64e129b",
+            "label": "Copyright Text",
+            "name": "c_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "Copyright © 2023 | All Rights Reserved",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_6424e6e70810d",
             "label": "Links",
             "name": "c_links",
@@ -361,7 +383,12 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1682714692
+    "modified": 1683137083
 }

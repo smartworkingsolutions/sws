@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="search-icon hidden | xl:flex items-center">
-		<button class="fill-text-color"><?php get_svg( 'icons/search' ); ?></button>                        
+		<button class="fill-text-color hover:fill-blue-medium"><?php get_svg( 'icons/search' ); ?></button>                        
 	</div>
 
 </div>

@@ -35,9 +35,9 @@ class SWS_Actions {
 		}
 
 		?>
-		<section class="w-full bg-dark-color text-white py-10 text-center">
+		<section class="w-full bg-blue-dark text-white py-20 text-center">
 			<div class="container">
-				<h1 class="text-5xl font-medium">
+				<h1 class="text-5xl lg:text-7xl font-medium text-white leading-tight">
 					<?php echo wp_kses_post( $this->get_custom_title() ); ?>
 				</h1>
 			</div>

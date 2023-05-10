@@ -22,9 +22,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-				sws_post_title();
-
-				echo '<div class="w-full wysiwyg-editor space-y-6">';
+				echo '<div class="wysiwyg-editor | w-full bg-white p-10 rounded-20 space-y-10">';
 				the_content();
 				echo '</div>';
 

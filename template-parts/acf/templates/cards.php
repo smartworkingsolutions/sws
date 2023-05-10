@@ -71,7 +71,7 @@ if ( ! have_rows( 'add_cards' ) ) {
 					</div>',
 					wp_kses_post( $image_html ),
 					esc_html( $card_title ),
-					esc_html( $text ),
+					wp_kses_post( $text ),
 					$linkedin_html // phpcs:ignore
 				);
 

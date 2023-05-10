@@ -10,7 +10,7 @@ $subheading = get_sub_field( 'sub_heading' );
 $btn        = get_sub_field( 'button' );
 
 if ( ! is_front_page() ) {
-	$heading = esc_html__( 'Hire Best-in-Class Remote ', 'sws' ) . get_the_title();
+	$heading = __( 'Hire Best-in-Class Remote<br>', 'sws' ) . get_the_title();
 }
 ?>
 

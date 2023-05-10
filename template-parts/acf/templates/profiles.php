@@ -69,17 +69,20 @@ if ( ! $heading && ! $members ) {
 				?>
 				<div class="grid gap-2">
 					<span class="font-medium"><?php esc_html_e( 'Expertise: ', 'sws' ); ?></span>
-					<ul class="flex items-center gap-2.5">
+					<ul class="flex flex-wrap items-center gap-2.5">
 						<?php
 						foreach ( $skills as $skill ) {
 
-							$color = ' bg-blue-dark';
+							$color = ' bg-dark-color';
 
 							if ( 1 === $count ) {
 								$color = ' bg-blue-light';
 							}
 							if ( 2 === $count ) {
 								$color = ' bg-blue-medium';
+							}
+							if ( 3 === $count ) {
+								$color = ' bg-blue-dark';
 							}
 
 							printf(

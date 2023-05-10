@@ -240,10 +240,10 @@ function theme_header_html() {
 	?>
 
 	<!-- Header start -->
-	<header class="site-header w-full relative">
+	<header class="site-header | w-full relative">
 		<div class="container">
 
-			<div class="header-wrap min-h-[85px] flex justify-between items-center relative z-10">
+			<div class="header-wrap | min-h-[85px] flex justify-between items-center relative z-10">
 
 				<?php theme_logo(); ?>
 
@@ -268,7 +268,7 @@ function theme_header_html() {
 			<div class="container relative">
 				<?php get_search_form(); ?>
 				<div class="close absolute top-4 right-8">
-					<button class="stroke-text-color"><?php get_svg( 'icons/close' ); ?></button>
+					<button class="stroke-text-color hover:stroke-red-500"><?php get_svg( 'icons/close' ); ?></button>
 				</div>
 			</div>
 		</div>
@@ -311,6 +311,7 @@ function theme_footer_html() {
  * Prints HTML of Copyrights.
  */
 function theme_copyrights_html() {
+	$copyright_text = get_field( 'c_text', 'option' );
 	?>
 
 	<!-- Copyrights start -->
@@ -319,9 +320,12 @@ function theme_copyrights_html() {
 
 			<div class="grid xl:grid-cols-12 gap-8 bg-white rounded-20 px-12 py-9">
 				<?php
+				if ( $copyright_text ) {
+					echo '<div class="col-span-full xl:col-span-5 flex justify-center xl:justify-start">' . wp_kses_post( $copyright_text ) . '</div>';
+				}
 				if ( have_rows( 'c_links', 'option' ) ) :
 
-					echo '<ul class="xl:col-start-6 xl:col-span-7 grid sm:flex text-center justify-center sm:justify-between gap-5">';
+					echo '<ul class="xl:col-span-7 grid sm:flex text-center justify-center sm:justify-between gap-5">';
 
 					while ( have_rows( 'c_links', 'option' ) ) :
 						the_row();

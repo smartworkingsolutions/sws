@@ -126,13 +126,13 @@ p.small {
 }
 .wysiwyg-editor ul,
 .wysiwyg-editor ol {
-    @apply text-lg font-semibold;
+    @apply text-lg font-semibold list-outside pl-6;
 }
 .wysiwyg-editor ul {
-    @apply list-disc list-inside;
+    @apply list-disc;
 }
 .wysiwyg-editor ol {
-    @apply list-decimal list-inside;
+    @apply list-decimal;
 }
 .wysiwyg-editor ul li,
 .wysiwyg-editor ol li {
