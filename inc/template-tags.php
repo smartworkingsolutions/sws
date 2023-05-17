@@ -27,7 +27,7 @@ function theme_logo( $loc = '' ) {
 		}
 
 		printf(
-			'<a href="%s" class="navbar-brand">
+			'<a href="%s" rel="home">
 				<img class="max-h-5" src="%s">
 			</a>',
 			esc_url( get_home_url() ),

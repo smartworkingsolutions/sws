@@ -6,6 +6,7 @@
             "key": "field_6387049f3114d",
             "label": "Custom URL",
             "name": "custom_url",
+            "aria-label": "",
             "type": "page_link",
             "instructions": "",
             "required": 0,
@@ -15,13 +16,14 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "post_type": [
                 "page"
             ],
             "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
+            "allow_archives": 0,
+            "multiple": 0,
+            "allow_null": 1
         }
     ],
     "location": [
@@ -42,5 +44,17 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680284704
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
+    "acfe_note": "",
+    "modified": 1683746573
 }

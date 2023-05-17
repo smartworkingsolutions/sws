@@ -3,6 +3,56 @@
     "title": "General Settings",
     "fields": [
         {
+            "key": "field_64650bac0bacd",
+            "label": "Typography",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64650bca0bace",
+            "label": "Select Font",
+            "name": "select_font",
+            "aria-label": "",
+            "type": "Typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "display_properties": [
+                "font_family"
+            ],
+            "required_properties": "",
+            "font_size": 15,
+            "font_family": "Red Hat Display",
+            "font_weight": 400,
+            "font_style": "normal",
+            "font_variant": "normal",
+            "font_stretch": "normal",
+            "line_height": "",
+            "letter_spacing": 0,
+            "text_align": "left",
+            "text_color": "#000",
+            "text_decoration": "none",
+            "text_transform": "none"
+        },
+        {
             "key": "field_6218b086f118f",
             "label": "Color Scheme",
             "name": "",
@@ -250,7 +300,12 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1682707867
+    "modified": 1684344604
 }

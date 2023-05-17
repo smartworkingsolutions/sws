@@ -140,7 +140,7 @@ p.small {
 }
 .wysiwyg-editor.exp ul,
 .wysiwyg-editor.exp ol {
-    @apply grid gap-2.5 list-none;
+    @apply grid gap-2.5 list-none pl-0;
 }
 .wysiwyg-editor.exp ul li,
 .wysiwyg-editor.exp ol li {

@@ -25,17 +25,18 @@ $btn     = get_field( 'error_button', 'option' );
 
 			<?php
 			if ( $heading ) {
-				echo '<h2 class="text-4xl font-bold text-blue-dark mb-4">' . esc_html( $heading ) . '</h2>';
+				echo '<h2 class="text-4xl font-medium text-blue-dark mb-4">' . esc_html( $heading ) . '</h2>';
 			}
 			if ( $text ) {
 				echo '<p class="max-w-3xl mx-auto">' . wp_kses_post( $text ) . '</p>';
 			}
 			if ( $btn ) {
 				printf(
-					'<a href="%s" class="button mt-10" target="%s">%s</a>',
+					'<a href="%s" class="button mt-10" target="%s">%s%s</a>',
 					esc_url( $btn['url'] ),
 					esc_html( $btn['target'] ),
-					esc_html( $btn['title'] )
+					esc_html( $btn['title'] ),
+					get_svg( 'icons/button-arrow', false ) // phpcs:ignore
 				);
 			}
 			?>

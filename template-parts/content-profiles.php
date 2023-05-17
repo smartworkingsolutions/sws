@@ -35,7 +35,8 @@
 
 			<div class="flex flex-col justify-between bg-white rounded-xl">
 
-				<div>
+				<div class="h-full flex flex-col justify-between">
+					<div>
 					<header class="grid gap-4 px-7 pt-7">
 					<?php
 					foreach ( $profiles as $profile ) {
@@ -77,7 +78,7 @@
 						</ul>
 					</div>
 					</header>
-					<div class="wysiwyg-editor exp | px-7 py-5 flex flex-col justify-between min-h-[258px]">
+					<div class="wysiwyg-editor exp | px-7 py-5 flex flex-col justify-between lg:min-h-[258px]">
 						<?php the_content(); ?>
 					</div>
 					<div class="flex justify-between items-center px-7">
@@ -92,6 +93,7 @@
 						<?php
 						echo $experience ? '<div class="text-sm lg:text-base bg-blue-medium text-white font-extrabold rounded-20 px-3 py-1">' . esc_html( $experience ) . esc_html__( ' years experience', 'sws' ) . '</div>' : '';
 						?>
+					</div>
 					</div>
 					<?php
 					printf(

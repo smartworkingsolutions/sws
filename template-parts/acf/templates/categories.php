@@ -28,6 +28,7 @@ if ( ! $heading && ! $cats ) {
 		foreach ( $cats as $category ) {
 
 			$custom_url = get_field( 'custom_url', $category->taxonomy . '_' . $category->term_id );
+			$cat_name   = str_replace( 'Developer', 'Developers', $category->name );
 
 			if ( ! $custom_url ) {
 				$custom_url = '/services/' . $category->slug;
@@ -38,7 +39,7 @@ if ( ! $heading && ! $cats ) {
 					%s%s
 				</a>',
 				esc_url( $custom_url ),
-				esc_html( $category->name ),
+				esc_html( $cat_name ),
 				get_svg( 'icons/button-arrow', false ) // phpcs:ignore
 			);
 		}

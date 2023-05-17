@@ -50,13 +50,10 @@ class SWS_Actions {
 	 */
 	public function get_custom_title() {
 
-		$output = wp_kses_post( get_the_title( get_the_id() ) );
+		$output = get_the_title( get_the_id() );
 
 		if ( is_archive() ) {
 			$output = get_the_archive_title();
-		}
-		if ( is_page() ) {
-			$output = wp_kses_post( get_the_title( get_the_id() ) );
 		}
 		if ( is_search() ) {
 			// translators: Heading for search page.

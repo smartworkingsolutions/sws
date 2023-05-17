@@ -220,6 +220,9 @@ function add_theme_options() {
 	$color_4      = get_field( 'color_4', 'options' );
 	$border_color = get_field( 'border_color', 'options' );
 	$text_color   = get_field( 'text_color', 'options' );
+	$font         = get_field( 'select_font', 'options' );
+
+	print_r( $font );
 	?>
 	<style>
 		:root {

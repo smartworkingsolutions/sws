@@ -97,7 +97,7 @@ if ( ! $heading && ! $members ) {
 					</ul>
 				</div>
 				</header>
-				<div class="wysiwyg-editor exp | px-7 py-5 flex flex-col justify-between min-h-[258px]">
+				<div class="wysiwyg-editor exp | px-7 py-5 flex flex-col justify-between lg:min-h-[258px]">
 					<?php the_content(); ?>
 				</div>
 				<div class="flex justify-between items-center px-7">
