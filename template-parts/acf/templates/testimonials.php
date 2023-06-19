@@ -25,8 +25,8 @@ if ( ! $testimonials ) {
 	$args = [
 		'post_type'      => 'testimonials',
 		'posts_per_page' => '-1',
-		'order'          => 'ASC',
 		'post__in'       => $testimonials,
+		'orderby'        => 'post__in',
 	];
 
 	$query = new WP_Query( $args );
@@ -49,7 +49,7 @@ if ( ! $testimonials ) {
 		$author_pic_html = '';
 
 		if ( $featured_img_url ) {
-			$image_html = '<img class="h-5 xl:h-7 mt-6" src="' . $featured_img_url . '">';
+			$image_html = '<img class="h-8" src="' . $featured_img_url . '">';
 		}
 		if ( $author_pic ) {
 			//$author_pic_html = '<img src="' . $author_pic . '">';
@@ -61,7 +61,8 @@ if ( ! $testimonials ) {
 			<?php
 			printf(
 				'<a class="text-text-color" href="%1$s">
-					<div class="text-22 border-b border-border-color pb-2.5">%2$s</div>
+					<div class="text-22 line-clamp-6">%2$s</div>
+					<div class="w-full border-t border-border-color mt-2.5"></div>
 					<div class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5 fill-text-color">%3$s%4$s</div>
 					
 					<div class="flex justify-between items-center gap-4 mt-9">
@@ -73,12 +74,12 @@ if ( ! $testimonials ) {
 					</div>
 				</a>',
 				esc_url( get_the_permalink() ),
-				html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 50, '...' ) ), // phpcs:ignore
+				html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ), // phpcs:ignore
 				esc_html__( 'Read more', 'sws' ),
 				get_svg( 'icons/button-arrow-small', false ), // phpcs:ignore
 				wp_kses_post( get_the_title() ),
 				esc_html( $job ),
-				wp_kses_post( $author_pic_html )
+				wp_kses_post( $image_html )
 			);
 			?>
 

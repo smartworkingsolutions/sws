@@ -3,56 +3,6 @@
     "title": "General Settings",
     "fields": [
         {
-            "key": "field_64650bac0bacd",
-            "label": "Typography",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_64650bca0bace",
-            "label": "Select Font",
-            "name": "select_font",
-            "aria-label": "",
-            "type": "Typography",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "display_properties": [
-                "font_family"
-            ],
-            "required_properties": "",
-            "font_size": 15,
-            "font_family": "Red Hat Display",
-            "font_weight": 400,
-            "font_style": "normal",
-            "font_variant": "normal",
-            "font_stretch": "normal",
-            "line_height": "",
-            "letter_spacing": 0,
-            "text_align": "left",
-            "text_color": "#000",
-            "text_decoration": "none",
-            "text_transform": "none"
-        },
-        {
             "key": "field_6218b086f118f",
             "label": "Color Scheme",
             "name": "",
@@ -75,7 +25,7 @@
             "name": "color_1",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #00017A",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -94,7 +44,7 @@
             "name": "color_2",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #2F2CD6",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -113,7 +63,7 @@
             "name": "color_3",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #5956FF",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -132,7 +82,7 @@
             "name": "color_4",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #040524",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -151,7 +101,7 @@
             "name": "body_color",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #ECF1F5",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -170,7 +120,7 @@
             "name": "border_color",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #ECF1F5",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -189,7 +139,7 @@
             "name": "text_color",
             "aria-label": "",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "Default value: #040524",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -307,5 +257,5 @@
         }
     },
     "acfe_note": "",
-    "modified": 1684344604
+    "modified": 1684432403
 }

@@ -77,7 +77,7 @@ if ( ! function_exists( 'sws_setup' ) ) :
 			apply_filters(
 				'sws_custom_background_args',
 				[
-					'default-color' => 'ffffff',
+					'default-color' => 'ECF1F5',
 					'default-image' => '',
 				]
 			)
@@ -94,8 +94,8 @@ if ( ! function_exists( 'sws_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			[
-				'height'      => 50,
-				'width'       => 138,
+				'height'      => 20,
+				'width'       => 163,
 				'flex-width'  => true,
 				'flex-height' => true,
 			]
@@ -161,10 +161,6 @@ function sws_scripts() {
 	 * Scripts
 	 */
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
 	// Theme's scrips.
 	wp_enqueue_script( 'sws-custom-js', $path . '/js/custom.js', [ 'jquery' ], $version, true );
 
@@ -173,9 +169,6 @@ function sws_scripts() {
 
 	// Google fonts.
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap', false ); //phpcs:ignore
-
-	// FB.
-	wp_enqueue_script( 'fb-root', '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0', [], '', true ); //phpcs:ignore
 
 }
 add_action( 'wp_enqueue_scripts', 'sws_scripts' );
@@ -220,9 +213,6 @@ function add_theme_options() {
 	$color_4      = get_field( 'color_4', 'options' );
 	$border_color = get_field( 'border_color', 'options' );
 	$text_color   = get_field( 'text_color', 'options' );
-	$font         = get_field( 'select_font', 'options' );
-
-	print_r( $font );
 	?>
 	<style>
 		:root {
@@ -262,4 +252,20 @@ function remove_big_image_sizes() {
 }
 add_action( 'init', 'remove_big_image_sizes' );
 
+/**
+ * This will add Google Tag Manager into head.
+ */
+function add_googleanalytics() {
+	?>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5EQXCTQFT"></script><?php // phpcs:ignore ?>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
+	gtag('config', 'G-K5EQXCTQFT');
+	</script>
+	<?php
+}
+add_action( 'wp_head', 'add_googleanalytics' );

@@ -47,7 +47,7 @@ if ( ! have_rows( 'add_cards' ) ) {
 
 				if ( $image ) {
 					$image_html = sprintf(
-						'<img class="w-full lg:w-1/3 h-full object-cover lg:rounded-l-20" src="%1$s" alt="%2$s">',
+						'<img class="w-full lg:w-1/3 h-full object-cover lg:rounded-l-20 lg:shrink-0" src="%1$s" alt="%2$s">',
 						$image,
 						$card_title,
 					);
