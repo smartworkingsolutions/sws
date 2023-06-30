@@ -43,16 +43,10 @@ if ( ! $testimonials ) {
 
 		$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 		$job              = get_field( 'job', get_the_ID() );
-		$author_pic       = get_field( 'author_image', get_the_ID() );
-
-		$image_html      = '';
-		$author_pic_html = '';
+		$image_html       = '';
 
 		if ( $featured_img_url ) {
 			$image_html = '<img class="h-8" src="' . $featured_img_url . '">';
-		}
-		if ( $author_pic ) {
-			//$author_pic_html = '<img src="' . $author_pic . '">';
 		}
 		?>
 

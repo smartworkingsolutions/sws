@@ -41,6 +41,9 @@ module.exports = {
 				'10': '10px',
 				'14': '14px',
 				'20': '20px',
+			},
+			borderWidth: {
+				'5': '5px',
 			}
 		},
 	},

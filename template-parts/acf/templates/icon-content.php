@@ -5,7 +5,13 @@
  * @package SWS
  */
 
+$columns = get_sub_field( 'columns' );
 $heading = get_sub_field( 'heading' );
+$classes = ' xl:grid-cols-3';
+
+if ( '4' === $columns ) {
+	$classes = ' xl:grid-cols-4';
+}
 ?>
 
 <section class="w-full">
@@ -18,7 +24,7 @@ $heading = get_sub_field( 'heading' );
 
 	if ( have_rows( 'add_content' ) ) :
 
-		echo '<div class="grid md:grid-cols-2 xl:grid-cols-3 justify-center gap-8 mt-10 lg:mt-14">';
+		echo '<div class="grid md:grid-cols-2' . esc_html( $classes ) . ' justify-center gap-8 mt-10 lg:mt-14">';
 
 		// Loop through rows.
 		while ( have_rows( 'add_content' ) ) :

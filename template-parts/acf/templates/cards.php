@@ -8,23 +8,21 @@
 $columns = get_sub_field( 'columns' );
 $heading = get_sub_field( 'heading' );
 $class   = '';
-$width   = 'max-w-6xl mx-auto';
 
 if ( 'two' === $columns ) {
 	$class = ' xl:grid-cols-2';
-	$width = 'w-full';
 }
 if ( ! have_rows( 'add_cards' ) ) {
 	return;
 }
 ?>
 
-<section class="<?php echo $width ? esc_html( $width ) : ''; ?>">
+<section class="w-full">
 	<div class="container">
 
 		<?php
 		if ( $heading ) {
-			echo '<h2 class="text-32 lg:text-58 text-text-color font-medium leading-[1.1] text-center mb-10 lg:mb-14">' . wp_kses_post( $heading ) . '</h2>';
+			echo '<h2 class="text-32 lg:text-58 text-text-color font-medium leading-[1.1] mb-10 lg:mb-14">' . wp_kses_post( $heading ) . '</h2>';
 		}
 
 		// Lists.
@@ -47,7 +45,7 @@ if ( ! have_rows( 'add_cards' ) ) {
 
 				if ( $image ) {
 					$image_html = sprintf(
-						'<img class="w-full lg:w-1/3 h-full object-cover lg:rounded-l-20 lg:shrink-0" src="%1$s" alt="%2$s">',
+						'<img class="w-full lg:w-[367px] h-full lg:h-[439px] object-cover rounded-20 shrink-0" src="%1$s" alt="%2$s">',
 						$image,
 						$card_title,
 					);
@@ -61,9 +59,9 @@ if ( ! have_rows( 'add_cards' ) ) {
 				}
 
 				printf(
-					'<div class="grid lg:flex items-center bg-white rounded-20">
+					'<div class="grid lg:flex items-center">
 						%1$s
-						<div class="grid items-start gap-6 p-8">
+						<div class="h-full grid items-center gap-6 bg-white rounded-20 p-10 xl:p-16">
 							<h3 class="text-4xl font-medium">%2$s</h3>
 							<h4 class="text-xl font-medium">%3$s</h4>
 							%4$s

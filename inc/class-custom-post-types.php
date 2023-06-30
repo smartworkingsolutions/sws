@@ -20,6 +20,7 @@ class Custom_Post_Types {
 		add_action( 'init', [ $this, 'member_profile_taxonomy' ] );
 		add_action( 'init', [ $this, 'member_skill_taxonomy' ] );
 		add_action( 'init', [ $this, 'testimonials_custom_post_type' ] );
+		add_action( 'init', [ $this, 'glassdoor_custom_post_type' ] );
 	}
 
 	/**
@@ -198,6 +199,61 @@ class Custom_Post_Types {
 
 		// Registering your Custom Post Type.
 		register_post_type( 'testimonials', $args );
+	}
+
+	/**
+	 * Glassdoor CPT
+	 */
+	public function glassdoor_custom_post_type() {
+
+		// Set UI labels for Custom Post Type.
+		$labels = [
+			'name'               => _x( 'Glassdoor', 'Post Type General Name', 'sws' ),
+			'singular_name'      => _x( 'Glassdoor', 'Post Type Singular Name', 'sws' ),
+			'menu_name'          => __( 'Glassdoor', 'sws' ),
+			'parent_item_colon'  => __( 'Parent Glassdoor', 'sws' ),
+			'all_items'          => __( 'All Glassdoor', 'sws' ),
+			'view_item'          => __( 'View Glassdoor', 'sws' ),
+			'add_new_item'       => __( 'Add New Glassdoor', 'sws' ),
+			'add_new'            => __( 'Add New', 'sws' ),
+			'edit_item'          => __( 'Edit Glassdoor', 'sws' ),
+			'update_item'        => __( 'Update Glassdoor', 'sws' ),
+			'search_items'       => __( 'Search Glassdoor', 'sws' ),
+			'not_found'          => __( 'Not Found', 'sws' ),
+			'not_found_in_trash' => __( 'Not found in Trash', 'sws' ),
+		];
+
+		// Set other options for Custom Post Type.
+		$args = [
+			'label'               => __( 'Glassdoor', 'sws' ),
+			'menu_icon'           => 'dashicons-testimonial',
+			'description'         => __( 'Glassdoor posts', 'sws' ),
+			'labels'              => $labels,
+			// Features this CPT supports in Post Editor.
+			'supports'            => [ 'title', 'editor', 'thumbnail', 'custom-fields' ],
+			/**
+			 * A hierarchical CPT is like Pages and can have
+			 * Parent and child items. A non-hierarchical CPT
+			 * is like Posts.
+			 */
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 5,
+			'can_export'          => true,
+			'has_archive'         => false,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'post',
+			// 'show_in_rest'        => true,
+
+		];
+
+		// Registering your Custom Post Type.
+		register_post_type( 'glassdoor', $args );
 	}
 
 }
