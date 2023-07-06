@@ -36,7 +36,6 @@ function sws_pingback_header() {
 }
 add_action( 'wp_head', 'sws_pingback_header' );
 
-
 /**
  * Get svg file content.
  *
@@ -60,4 +59,25 @@ function get_svg( $path, $echo = true ) {
 	} else {
 		return $svg;
 	}
+}
+
+/**
+ * Get different color backgrounds.
+ *
+ * @param string $count count items.
+ *
+ * @return string
+ */
+function get_colors( $count ) {
+	$color = ' bg-dark-color';
+	if ( 1 === $count ) {
+		$color = ' bg-blue-light';
+	}
+	if ( 2 === $count ) {
+		$color = ' bg-blue-medium';
+	}
+	if ( 3 === $count ) {
+		$color = ' bg-blue-dark';
+	}
+	return $color;
 }

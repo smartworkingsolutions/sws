@@ -73,21 +73,11 @@ if ( ! $heading && ! $members ) {
 						<?php
 						foreach ( $skills as $skill ) {
 
-							$color = ' bg-dark-color';
-
-							if ( 1 === $count ) {
-								$color = ' bg-blue-light';
-							}
-							if ( 2 === $count ) {
-								$color = ' bg-blue-medium';
-							}
-							if ( 3 === $count ) {
-								$color = ' bg-blue-dark';
-							}
+							$bg_colors = get_colors( $count );
 
 							printf(
 								'<li><a class="text-xs font-extrabold text-white px-3 py-1.5 rounded-md%s" href="%s">%s</a></li>',
-								esc_html( $color ),
+								esc_html( $bg_colors ),
 								esc_url( get_term_link( $skill ) ),
 								esc_html( $skill->name )
 							);

@@ -43,18 +43,8 @@ if ( ! $heading && ! have_rows( 'add_steps' ) ) {
 			the_row();
 
 			// Load sub field value.
-			$text  = get_sub_field( 'content' );
-			$color = ' bg-dark-color';
-
-			if ( 1 === $count ) {
-				$color = ' bg-blue-light';
-			}
-			if ( 2 === $count ) {
-				$color = ' bg-blue-medium';
-			}
-			if ( 3 === $count ) {
-				$color = ' bg-blue-dark';
-			}
+			$text      = get_sub_field( 'content' );
+			$bg_colors = get_colors( $count );
 
 			if ( $text ) {
 				printf(
@@ -62,7 +52,7 @@ if ( ! $heading && ! have_rows( 'add_steps' ) ) {
 						<div class="w-[378px] h-[104px] flex items-center px-10 text-white text-58 font-medium shrink-0 rounded-20%s">Step %s</div>
 						<p class="text-2xl xl:pl-40 pr-6 xl:pr-16">%s</p>
 					</li>',
-					esc_html( $color ),
+					esc_html( $bg_colors ),
 					esc_html( $count ),
 					wp_kses_post( $text )
 				);

@@ -48,13 +48,7 @@ if ( ! $heading && ! $btn && ! have_rows( 'add_step' ) ) {
 			$subheading = get_sub_field( 'title' );
 			$content    = get_sub_field( 'content' );
 
-			$color = ' bg-blue-dark';
-			if ( 1 === $count ) {
-				$color = ' bg-blue-light';
-			}
-			if ( 2 === $count ) {
-				$color = ' bg-blue-medium';
-			}
+			$bg_colors = get_colors( $count );
 
 			printf(
 				'<div class="grid lg:flex justify-between items-center bg-white rounded-20">
@@ -62,7 +56,7 @@ if ( ! $heading && ! $btn && ! have_rows( 'add_step' ) ) {
 					<div class="w-full h-full lg:max-w-lg flex items-center gap-5 text-2xl font-medium rounded-20 px-10 py-5 text-white fill-white%s">%s</div>
 				</div>',
 				wp_kses_post( $subheading ),
-				esc_html( $color ),
+				esc_html( $bg_colors ),
 				esc_html( $content )
 			);
 
