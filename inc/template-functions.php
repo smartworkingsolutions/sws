@@ -62,7 +62,7 @@ function get_svg( $path, $echo = true ) {
 }
 
 /**
- * Get different color backgrounds.
+ * Get different color's background classes.
  *
  * @param string $count count items.
  *
@@ -70,13 +70,13 @@ function get_svg( $path, $echo = true ) {
  */
 function get_colors( $count ) {
 	$color = ' bg-dark-color';
-	if ( 1 === $count ) {
+	if ( 1 === $count || 5 === $count ) {
 		$color = ' bg-blue-light';
 	}
-	if ( 2 === $count ) {
+	if ( 2 === $count || 6 === $count ) {
 		$color = ' bg-blue-medium';
 	}
-	if ( 3 === $count ) {
+	if ( 3 === $count || 7 === $count ) {
 		$color = ' bg-blue-dark';
 	}
 	return $color;

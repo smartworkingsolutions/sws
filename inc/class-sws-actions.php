@@ -30,14 +30,14 @@ class SWS_Actions {
 	 * Prints HTML of title section after header.
 	 */
 	public function get_after_header() {
-		if ( is_front_page() || ( is_post_type_archive( 'testimonials' ) || is_singular( 'testimonials' ) ) || has_post_parent() ) {
+		if ( is_page_template( 'page-acf-no-title.php' ) || is_front_page() || ( is_post_type_archive( 'testimonials' ) || is_singular( 'testimonials' ) ) || has_post_parent() ) {
 			return;
 		}
 
 		?>
-		<section class="w-full bg-blue-dark text-white py-20 text-center">
+		<section class="w-full text-text-color pt-9 pb-14 text-center">
 			<div class="container">
-				<h1 class="text-5xl lg:text-7xl font-medium text-white leading-tight">
+				<h1 class="text-5xl lg:text-58 font-medium leading-tight">
 					<?php echo wp_kses_post( $this->get_custom_title() ); ?>
 				</h1>
 			</div>
@@ -54,6 +54,10 @@ class SWS_Actions {
 
 		if ( is_archive() ) {
 			$output = get_the_archive_title();
+
+			if ( is_post_type_archive( 'glassdoor' ) ) {
+				$output = __( 'Testimonials', 'sws' );
+			}
 		}
 		if ( is_search() ) {
 			// translators: Heading for search page.

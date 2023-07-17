@@ -62,6 +62,7 @@ if ( ! $heading && ! $btn && ! $reviews ) {
 		if ( $featured_img_url ) {
 			$image_html = '<img class="w-[60px] h-[60px] object-cover" src="' . $featured_img_url . '">';
 		}
+		$glassdoor_image = '<img class="h-[72px]" src="' . get_template_directory_uri() . '/images/glassdoor.png" alt="Glassdoor">';
 
 		printf(
 			'<div class="grid gap-5 justify-between bg-white text-text-color p-8 rounded-14">
@@ -74,12 +75,14 @@ if ( ! $heading && ! $btn && ! $reviews ) {
 				</div>
 				%s
 				<div class="text-22 line-clamp-6">%s</div>
+				%s
 			</div>',
 			wp_kses_post( get_the_title() ),
 			esc_html( $job ),
 			wp_kses_post( $image_html ),
 			get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
 			html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ), // phpcs:ignore
+			wp_kses_post( $glassdoor_image )
 		);
 
 	endwhile;

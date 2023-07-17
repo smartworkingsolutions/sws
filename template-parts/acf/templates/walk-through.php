@@ -65,15 +65,6 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 
 					echo '</ul>';
 				}
-				// if ( $button ) {
-				// 	printf(
-				// 		'<div><a href="%s" class="button" target="%s">%s%s</a></div>',
-				// 		esc_url( $button['url'] ),
-				// 		esc_html( $button['target'] ),
-				// 		esc_html( $button['title'] ),
-				// 		get_svg( 'icons/button-arrow', false ) // phpcs:ignore
-				// 	);
-				// }
 				?>
 			</div>
 			<div class="xl:col-span-7 relative">

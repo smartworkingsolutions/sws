@@ -22,8 +22,8 @@ class Custom_Pagination {
 		$defaults = [
 			'range'           => 4,
 			'custom_query'    => false,
-			'previous_string' => '<',
-			'next_string'     => '>',
+			'previous_string' => get_svg( 'icons/button-arrow', false ),
+			'next_string'     => get_svg( 'icons/button-arrow', false ),
 			'before_output'   => '<div class="pagination | mt-16">',
 			'after_output'    => '</div>',
 		];
@@ -69,9 +69,9 @@ class Custom_Pagination {
 		$previous = intval( $page ) - 1;
 		$previous = esc_attr( get_pagenum_link( $previous ) );
 
-		$echo .= '<ul class="flex justify-center space-x-2 font-bold">';
+		$echo .= '<ul class="flex justify-center gap-2 font-bold">';
 		if ( $previous && ( 1 !== $page ) ) {
-			$echo .= '<a class="w-9 h-9 grid place-content-center bg-white hover:bg-blue-medium rounded-10 text-text-color hover:text-white" href="' . $previous . '" title="' . __( 'previous', 'sws' ) . '" >' . $args['previous_string'] . '</a>';
+			$echo .= '<a class="w-16 h-10 grid place-content-center bg-white hover:bg-blue-medium rounded-10 fill-text-color hover:fill-white rotate-180" href="' . $previous . '" title="' . __( 'previous', 'sws' ) . '" >' . $args['previous_string'] . '</a>';
 		}
 		if ( ! empty( $min ) && ! empty( $max ) ) {
 			for ( $i = $min; $i <= $max; $i++ ) {
@@ -82,14 +82,14 @@ class Custom_Pagination {
 					$ac     = '';
 					$active = ' bg-white hover:bg-blue-medium text-text-color hover:text-white';
 				}
-				$echo .= sprintf( '<li><a class="w-9 h-9 grid place-content-center rounded-10' . $active . '" href="%s" ' . $ac . ' aria-label="Goto Page ' . $i . '">%s</a></li>', esc_attr( get_pagenum_link( $i ) ), $i );
+				$echo .= sprintf( '<li><a class="w-10 h-10 grid place-content-center rounded-10' . $active . '" href="%s" ' . $ac . ' aria-label="Goto Page ' . $i . '">%s</a></li>', esc_attr( get_pagenum_link( $i ) ), $i );
 			}
 		}
 		$next = intval( $page ) + 1;
 		$next = esc_attr( get_pagenum_link( $next ) );
 
 		if ( $next && ( $count !== $page ) ) {
-			$echo .= '<a class="w-9 h-9 grid place-content-center bg-white hover:bg-blue-medium rounded-10 text-text-color hover:text-white" href="' . $next . '" title="' . __( 'next', 'sws' ) . '">' . $args['next_string'] . '</a>';
+			$echo .= '<a class="w-16 h-10 grid place-content-center bg-white hover:bg-blue-medium rounded-10 fill-text-color hover:fill-white" href="' . $next . '" title="' . __( 'next', 'sws' ) . '">' . $args['next_string'] . '</a>';
 		}
 		$echo .= '</ul>';
 

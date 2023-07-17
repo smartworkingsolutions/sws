@@ -225,6 +225,47 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_64b03b7e463db",
+            "label": "Glassdoor Page",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64b03bae463dc",
+            "label": "Number of reviews",
+            "name": "number_of_reviews",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -250,12 +291,7 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": {
-        "acfcloneindex": {
-            "acfe_meta_key": "",
-            "acfe_meta_value": ""
-        }
-    },
+    "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1684432403
+    "modified": 1689271352
 }

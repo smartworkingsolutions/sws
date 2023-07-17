@@ -269,3 +269,20 @@ function add_googleanalytics() {
 	<?php
 }
 add_action( 'wp_head', 'add_googleanalytics' );
+
+/**
+ * Modifies the custom posts type query.
+ *
+ * @param object $query The default query.
+ * @return object $query The modified query.
+ */
+function modify_archive_query( $query ) {
+	// Glassdoor.
+	if ( $query->is_main_query() && ! is_admin() && is_post_type_archive( 'glassdoor' ) ) {
+		$post_num = get_field( 'number_of_reviews', 'option' ) ? get_field( 'number_of_reviews', 'option' ) : '6';
+		$query->set( 'posts_per_page', $post_num );
+	}
+
+	return $query;
+}
+add_filter( 'pre_get_posts', 'modify_archive_query' );
