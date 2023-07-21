@@ -296,7 +296,6 @@ function theme_footer_html() {
 				get_template_part( 'template-parts/footer/widget', '2' );
 				get_template_part( 'template-parts/footer/widget', '3' );
 				?>
-
 			</div>
 
 		</div><!-- container end -->
@@ -363,12 +362,10 @@ function theme_copyrights_html() {
  */
 function theme_back_to_top() {
 	?>
-
 	<!-- Back to top start -->
 	<a href="#top" class="back-to-top | w-14 h-14 place-content-center bg-blue-light hover:bg-dark-color fill-white rounded-full -rotate-90 fixed right-4 bottom-12 hidden">
 		<?php get_svg( 'icons/button-arrow' ); ?>
 	</a>
 	<!-- Back to top end -->
-
 	<?php
 }

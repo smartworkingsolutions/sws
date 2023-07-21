@@ -1,6 +1,6 @@
 {
     "key": "group_64ac562f35e5c",
-    "title": "Glassdoor",
+    "title": "Social Links",
     "fields": [
         {
             "key": "field_64ac562f20140",
@@ -31,6 +31,13 @@
                 "operator": "==",
                 "value": "glassdoor"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonials"
+            }
         ]
     ],
     "menu_order": 0,
@@ -47,12 +54,7 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": {
-        "acfcloneindex": {
-            "acfe_meta_key": "",
-            "acfe_meta_value": ""
-        }
-    },
+    "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1689015915
+    "modified": 1689876944
 }

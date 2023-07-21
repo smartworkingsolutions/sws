@@ -5,12 +5,13 @@
  * @package SWS
  */
 
-$heading = get_sub_field( 'heading' );
-$image   = get_sub_field( 'image' );
-$caption = get_sub_field( 'caption' );
-$button  = get_sub_field( 'button' );
-$pics    = get_sub_field( 'add_pics' );
-$count   = 1;
+$heading    = get_sub_field( 'heading' );
+$list_title = get_sub_field( 'list_title' );
+$image      = get_sub_field( 'image' );
+$caption    = get_sub_field( 'caption' );
+$button     = get_sub_field( 'button' );
+$pics       = get_sub_field( 'add_pics' );
+$count      = 1;
 
 if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows( 'add_lists' ) ) {
 	return;
@@ -22,7 +23,7 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 
 		<div class="grid xl:grid-cols-12 gap-8 items-center">
 
-			<div class="xl:col-span-5 grid gap-6">
+			<div class="xl:col-span-6 grid gap-6">
 				<?php
 				if ( $heading ) {
 					echo '<h2 class="text-32 lg:text-[42px] text-text-color font-medium leading-[1.1]">' . wp_kses_post( $heading ) . '</h2>';
@@ -43,8 +44,12 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 					echo '</div>';
 				}
 
+				echo '<div>';
 				// Lists.
 				if ( have_rows( 'add_lists' ) ) {
+					if ( $list_title ) {
+						echo '<p class="font-medium mb-1.5">' . esc_html( $list_title ) . '</p>';
+					}
 					echo '<ul class="">';
 
 					// Loop through rows.
@@ -56,7 +61,7 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 
 						if ( $list ) {
 							printf(
-								'<li class="flex items-center gap-2 text-lg font-medium"><span class="text-sm">#</span>%s</li>',
+								'<li class="flex items-center gap-2 text-lg font-medium opacity-70"><span class="text-sm">#</span>%s</li>',
 								wp_kses_post( $list )
 							);
 						}
@@ -66,8 +71,9 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 					echo '</ul>';
 				}
 				?>
+				</div>
 			</div>
-			<div class="xl:col-span-7 relative">
+			<div class="xl:col-span-6 relative">
 			<?php
 			if ( $caption ) {
 				printf(
@@ -77,7 +83,7 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 				);
 			}
 			if ( $image ) {
-				echo '<img class="w-full h-full object-cover rounded-10" src="' . esc_url( $image ) . '">';
+				echo '<img class="w-full h-full lg:h-[450px] object-cover rounded-10" src="' . esc_url( $image ) . '">';
 			}
 			if ( $button ) {
 				printf(
