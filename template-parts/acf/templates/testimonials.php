@@ -64,7 +64,7 @@ if ( ! $testimonials ) {
 			<?php
 			printf(
 				'<a class="text-text-color" href="%1$s">
-					<div class="text-22 line-clamp-6">%2$s</div>
+					<div class="blue-on-link | text-22 line-clamp-6">%2$s</div>
 					<div class="w-full border-t border-border-color mt-2.5"></div>
 					<div class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5 fill-text-color">%3$s%4$s</div>
 					

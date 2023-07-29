@@ -5,12 +5,16 @@
  * @package SWS
  */
 
-$columns = get_sub_field( 'columns' );
-$heading = get_sub_field( 'heading' );
-$classes = ' xl:grid-cols-3';
+$columns     = get_sub_field( 'columns' );
+$heading     = get_sub_field( 'heading' );
+$classes     = ' xl:grid-cols-3';
+$text_class  = '';
+$title_class = ' 3xl:text-58 3xl:leading-tight';
 
 if ( '4' === $columns ) {
-	$classes = ' xl:grid-cols-4';
+	$classes     = ' xl:grid-cols-4';
+	$text_class  = ' text-base';
+	$title_class = '';
 }
 ?>
 
@@ -44,12 +48,14 @@ if ( '4' === $columns ) {
 			printf(
 				'<div class="grid justify-center gap-7 bg-white px-8 py-12 rounded-14">
 					<div class="grid justify-center text-center gap-7">
-						<h3 class="text-32 lg:text-4xl 3xl:text-58 font-medium text-text-color leading-none">%s</h3>
-						<p class="opacity-70">%s</p>
+						<h3 class="text-32 lg:text-4xl font-medium text-text-color leading-tight%s">%s</h3>
+						<p class="opacity-70%s">%s</p>
 					</div>
 					%s
 				</div>',
+				esc_html( $title_class ),
 				wp_kses_post( $heading ),
+				esc_html( $text_class ),
 				wp_kses_post( $content ),
 				wp_kses_post( $icon_html )
 			);

@@ -27,7 +27,7 @@ if ( ! is_front_page() ) {
 		echo '<div class="grid gap-10 relative z-10">';
 
 		if ( $heading ) {
-			echo '<h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">' . wp_kses_post( $heading ) . '</h1>';
+			echo '<h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">' . wp_kses_post( $heading ) . '</h1>';
 		}
 		if ( $subheading ) {
 			echo '<p class="text-white/80">' . wp_kses_post( $subheading ) . '</p>';

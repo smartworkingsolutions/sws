@@ -19,7 +19,9 @@ p {
 p.small {
     @apply text-base;
 }
-
+.blue-on-link strong {
+    @apply text-blue-light;
+}
 .sub-menu::before {
     @apply content-[''] bg-transparent w-full h-8 absolute -top-8 left-0;
 }

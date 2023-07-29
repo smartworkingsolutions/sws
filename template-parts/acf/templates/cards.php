@@ -40,8 +40,9 @@ if ( ! have_rows( 'add_cards' ) ) {
 				$text       = get_sub_field( 'text' );
 				$linkedin   = get_sub_field( 'linkedin_url' );
 
-				$image_html    = '';
-				$linkedin_html = '';
+				$image_html      = '';
+				$linkedin_html   = '';
+				$card_title_html = '';
 
 				if ( $image ) {
 					$image_html = sprintf(
@@ -57,18 +58,21 @@ if ( ! have_rows( 'add_cards' ) ) {
 						get_svg( 'icons/linkedin', false )
 					);
 				}
+				if ( $card_title ) {
+					$card_title_html = '<h3 class="text-4xl font-medium">' . $card_title . '</h3>';
+				}
 
 				printf(
 					'<div class="grid lg:flex items-center">
 						%1$s
 						<div class="h-full grid items-center gap-6 bg-white rounded-20 p-10 xl:p-16">
-							<h3 class="text-4xl font-medium">%2$s</h3>
-							<h4 class="text-xl font-medium">%3$s</h4>
+							%2$s
+							<h4 class="text-2xl">%3$s</h4>
 							%4$s
 						</div>
 					</div>',
 					wp_kses_post( $image_html ),
-					esc_html( $card_title ),
+					wp_kses_post( $card_title_html ),
 					wp_kses_post( $text ),
 					$linkedin_html // phpcs:ignore
 				);

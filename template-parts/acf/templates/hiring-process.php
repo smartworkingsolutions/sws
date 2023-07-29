@@ -6,7 +6,7 @@
  */
 
 $heading = get_sub_field( 'heading' );
-$button  = get_sub_field( 'button' );
+$btn     = get_sub_field( 'button' );
 $count   = 1;
 
 if ( ! $heading && ! have_rows( 'add_steps' ) ) {
@@ -48,9 +48,9 @@ if ( ! $heading && ! have_rows( 'add_steps' ) ) {
 
 			if ( $text ) {
 				printf(
-					'<li class="flex items-center gap-6 xl:gap-0 bg-white rounded-20">
-						<div class="w-[378px] h-[104px] flex items-center px-10 text-white text-58 font-medium shrink-0 rounded-20%s">Step %s</div>
-						<p class="text-2xl xl:pl-40 pr-6 xl:pr-16">%s</p>
+					'<li class="grid sm:flex items-center sm:gap-6 xl:gap-0 bg-white rounded-20">
+						<div class="w-full sm:w-[180px] md:w-[255px] h-[75px] lg:w-[378px] lg:h-[104px] flex items-center px-10 text-white text-32 lg:text-58 font-medium shrink-0 rounded-20%s">Step %s</div>
+						<p class="text-base lg:text-xl xl:text-2xl p-6 sm:p-0 xl:pl-40 sm:pr-6 xl:pr-16">%s</p>
 					</li>',
 					esc_html( $bg_colors ),
 					esc_html( $count ),

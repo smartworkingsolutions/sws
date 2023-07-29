@@ -30,13 +30,6 @@
                 "operator": "==",
                 "value": "testimonials"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "glassdoor"
-            }
         ]
     ],
     "menu_order": 0,
@@ -53,12 +46,7 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": {
-        "acfcloneindex": {
-            "acfe_meta_key": "",
-            "acfe_meta_value": ""
-        }
-    },
+    "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687891514
+    "modified": 1690614517
 }

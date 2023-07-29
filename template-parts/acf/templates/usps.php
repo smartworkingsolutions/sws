@@ -15,13 +15,13 @@ $review_link   = get_sub_field( 'review_link' );
 <section classw-full>
 	<div class="container">
 
-	<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-2.5">
+	<div class="grid md:grid-cols-2 xl:grid-cols-12 gap-2.5">
 
 		<?php
 		// Lists.
 		if ( have_rows( 'add_list' ) ) :
 
-			echo '<ul class="md:col-span-2 grid gap-4 mb-8 md:mb-0">';
+			echo '<ul class="md:col-span-2 xl:col-span-5 grid gap-4 mb-8 md:mb-0">';
 
 			// Loop through rows.
 			while ( have_rows( 'add_list' ) ) :
@@ -31,7 +31,7 @@ $review_link   = get_sub_field( 'review_link' );
 				$list = get_sub_field( 'list' );
 
 				printf(
-					'<li class="w-max h-[50px] grid place-content-center text-22 font-medium border border-text-color rounded-full px-5 mx-auto md:mx-0">%s
+					'<li class="w-fit py-2 grid place-content-center sm:text-22 font-medium border border-text-color rounded-full px-5 mx-auto xl:mx-0">%s
 					</li>',
 					esc_html( $list )
 				);
@@ -44,7 +44,7 @@ $review_link   = get_sub_field( 'review_link' );
 
 		// Rating.
 		if ( $rating_title || $rating_text ) {
-			echo '<div class="bg-white p-7 flex flex-col justify-between gap-4 text-text-color rounded-20">';
+			echo '<div class="xl:col-span-3 bg-white p-7 flex flex-col justify-between gap-4 text-text-color rounded-20">';
 			if ( $rating_title ) {
 				echo '<h2 class="text-32 font-bold leading-none">' . wp_kses_post( $rating_title ) . '</h2>';
 			}
@@ -58,7 +58,7 @@ $review_link   = get_sub_field( 'review_link' );
 		if ( $review_text || $review_number || $review_link ) {
 			if ( $review_link ) {
 				printf(
-					'<a href="%s" target="_blank" class="w-full p-7 flex flex-col justify-between bg-blue-light text-white rounded-20">
+					'<a href="%s" target="_blank" class="xl:col-span-3 xl:col-start-10 w-full p-7 flex flex-col justify-between bg-blue-light text-white rounded-20">
 						<p class="text-white">%s</p>
 						<div class="flex gap-2 items-center text-3xl sm:text-6xl font-bold">%s%s</div>
 					</a>',
@@ -69,7 +69,7 @@ $review_link   = get_sub_field( 'review_link' );
 				);
 			} else {
 				printf(
-					'<div class="w-full p-7 flex flex-col justify-between bg-blue-light text-white rounded-20">
+					'<div class="xl:col-span-3 xl:col-start-10 w-full p-7 flex flex-col justify-between bg-blue-light text-white rounded-20">
 						<p class="text-white">%s</p>
 						<div class="flex gap-2 items-center text-3xl sm:text-6xl font-bold">%s%s</div>
 					</div>',
@@ -79,48 +79,6 @@ $review_link   = get_sub_field( 'review_link' );
 				);
 			}
 		}
-		// if ( have_rows( 'add_reviews' ) ) :
-
-		// 	// Loop through rows.
-		// 	while ( have_rows( 'add_reviews' ) ) :
-		// 		the_row();
-
-		// 		// Load sub field value.
-		// 		$number = get_sub_field( 'number' );
-		// 		$text   = get_sub_field( 'text' );
-		// 		$url    = get_sub_field( 'link' );
-		// 		$color  = 1 === $count ? ' bg-blue-light' : ' bg-blue-medium';
-
-		// 		if ( $url ) {
-		// 			printf(
-		// 				'<a href="%s" target="_blank" class="w-full p-7 flex flex-col justify-between text-white rounded-20%s">
-		// 					<p class="text-white">%s</p>
-		// 					<div class="flex gap-2 items-center text-3xl sm:text-6xl font-bold">%s%s</div>
-		// 				</a>',
-		// 				esc_url( $url ),
-		// 				esc_html( $color ),
-		// 				wp_kses_post( $text ),
-		// 				esc_html( $number ),
-		// 				get_svg( 'icons/star', false ) // phpcs:ignore
-		// 			);
-		// 		} else {
-		// 			printf(
-		// 				'<div class="w-full p-7 flex flex-col justify-between text-white rounded-20%s">
-		// 					<p class="text-white">%s</p>
-		// 					<div class="flex gap-2 items-center text-3xl sm:text-6xl font-bold">%s%s</div>
-		// 				</div>',
-		// 				esc_html( $color ),
-		// 				wp_kses_post( $text ),
-		// 				esc_html( $number ),
-		// 				get_svg( 'icons/star', false ) // phpcs:ignore
-		// 			);
-		// 		}
-
-		// 		++$count;
-
-		// 	endwhile;
-
-		// endif;
 		?>
 	</div>
 

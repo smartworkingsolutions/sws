@@ -28,18 +28,8 @@ if ( ! $heading && ! have_rows( 'add_bullets' ) ) {
 			the_row();
 
 			// Load sub field value.
-			$text  = get_sub_field( 'content' );
-			$color = ' bg-dark-color';
-
-			if ( 1 === $count ) {
-				$color = ' bg-blue-light';
-			}
-			if ( 2 === $count ) {
-				$color = ' bg-blue-medium';
-			}
-			if ( 3 === $count ) {
-				$color = ' bg-blue-dark';
-			}
+			$text      = get_sub_field( 'content' );
+			$bg_colors = get_colors( $count );
 
 			if ( $text ) {
 				printf(
@@ -47,7 +37,7 @@ if ( ! $heading && ! have_rows( 'add_bullets' ) ) {
 						<div class="w-24 h-20 grid place-content-center text-white text-3xl shrink-0 rounded-20%s">%s</div>
 						<p class="text-xl">%s</p>
 					</li>',
-					esc_html( $color ),
+					esc_html( $bg_colors ),
 					esc_html( $count ),
 					wp_kses_post( $text )
 				);

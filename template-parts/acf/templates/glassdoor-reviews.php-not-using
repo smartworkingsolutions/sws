@@ -1,6 +1,6 @@
 <?php
 /**
- * The ACF template part for displaying Glassdoor reviews carousel.
+ * The ACF template part for displaying Glassdoor reviews.
  *
  * @package SWS
  */
@@ -38,9 +38,9 @@ if ( ! $heading && ! $btn && ! $reviews ) {
 
 	// Reviews.
 	$args = [
-		'post_type'      => 'glassdoor',
+		'post_type'      => 'testimonials',
 		'posts_per_page' => '-1',
-		'post__in'       => $glassdoor,
+		'post__in'       => $reviews,
 		'orderby'        => 'post__in',
 	];
 
@@ -71,7 +71,6 @@ if ( ! $heading && ! $btn && ! $reviews ) {
 						<h6 class="text-lg font-extrabold">%s</h6>
 						<p class="text-base opacity-60">%s</p>
 					</div>
-					%s
 				</div>
 				%s
 				<div class="text-22 line-clamp-6">%s</div>
@@ -79,7 +78,6 @@ if ( ! $heading && ! $btn && ! $reviews ) {
 			</div>',
 			wp_kses_post( get_the_title() ),
 			esc_html( $job ),
-			wp_kses_post( $image_html ),
 			get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
 			html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ), // phpcs:ignore
 			wp_kses_post( $glassdoor_image )

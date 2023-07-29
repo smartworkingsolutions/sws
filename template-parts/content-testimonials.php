@@ -1,6 +1,6 @@
 <?php
 /**
- * The template part for displaying Glassdoor reviews.
+ * The template part for displaying Testimonials.
  *
  * @package SWS
  */
@@ -12,7 +12,7 @@
 
 		<?php
 		if ( ! have_posts() ) {
-			echo '<p>No reviews found.</p>';
+			echo '<p>No testimonials found.</p>';
 		}
 
 		echo '<div class="grid gap-5">';
@@ -26,9 +26,9 @@
 			$image_html       = '';
 			$linkedin_html    = '';
 
-			if ( $featured_img_url ) {
-				$image_html = '<img class="w-[60px] h-[60px] object-cover" src="' . $featured_img_url . '">';
-			}
+			// if ( $featured_img_url ) {
+			// 	$image_html = '<img class="w-[60px] h-[60px] object-cover" src="' . $featured_img_url . '">';
+			// }
 			if ( $linkedin ) {
 				$linkedin_html = sprintf(
 					'<a href="%s">%s</a>',
@@ -40,22 +40,20 @@
 			printf(
 				'<div class="grid md:grid-cols-12 gap-6 md:gap-4 justify-between bg-white text-text-color p-5 md:p-8 rounded-14">
 					<div class="md:col-span-4 xl:col-span-3 flex gap-5">
-						%1$s
 						<div class="grid justify-between gap-2.5">
 							<div>
-								<h6 class="text-lg font-extrabold">%2$s</h6>
-								<p class="text-base opacity-60">%3$s</p>
+								<h6 class="text-lg font-extrabold">%1$s</h6>
+								<p class="text-base opacity-60">%2$s</p>
 							</div>
-							<span class="hidden md:block">%4$s</span>
+							<span class="hidden md:block">%3$s</span>
 						</div>
-						<span class="md:hidden ml-auto">%4$s</span>
+						<span class="md:hidden ml-auto">%3$s</span>
 					</div>
 					<div class="md:col-span-8 xl:col-span-9 grid gap-4">
-						%5$s
-						<div class="text-base">%6$s</div>
+						%4$s
+						<div class="text-base">%5$s</div>
 					</div>
 				</div>',
-				wp_kses_post( $image_html ),
 				wp_kses_post( get_the_title() ),
 				esc_html( $job ),
 				$linkedin_html, // phpcs:ignore

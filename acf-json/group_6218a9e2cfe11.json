@@ -24,9 +24,11 @@
             "acfe_flexible_layouts_thumbnails": 1,
             "acfe_flexible_layouts_settings": 0,
             "acfe_flexible_async": [],
-            "acfe_flexible_add_actions": [],
+            "acfe_flexible_add_actions": [
+                "copy"
+            ],
             "acfe_flexible_remove_button": [],
-            "acfe_flexible_layouts_state": "user",
+            "acfe_flexible_layouts_state": "collapse",
             "acfe_flexible_modal_edit": {
                 "acfe_flexible_modal_edit_enabled": "0",
                 "acfe_flexible_modal_edit_size": "large"
@@ -2608,5 +2610,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1689874013
+    "modified": 1690614391
 }
