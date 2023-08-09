@@ -21,14 +21,13 @@
 			the_post();
 
 			$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
-			$job              = get_field( 'job', get_the_ID() );
 			$linkedin         = get_field( 'linkedin', get_the_ID() );
 			$image_html       = '';
 			$linkedin_html    = '';
 
-			// if ( $featured_img_url ) {
-			// 	$image_html = '<img class="w-[60px] h-[60px] object-cover" src="' . $featured_img_url . '">';
-			// }
+			if ( $featured_img_url ) {
+				$image_html = '<img class="h-10 mt-2.5" src="' . $featured_img_url . '">';
+			}
 			if ( $linkedin ) {
 				$linkedin_html = sprintf(
 					'<a href="%s">%s</a>',
@@ -43,7 +42,7 @@
 						<div class="grid justify-between gap-2.5">
 							<div>
 								<h6 class="text-lg font-extrabold">%1$s</h6>
-								<p class="text-base opacity-60">%2$s</p>
+								%2$s
 							</div>
 							<span class="hidden md:block">%3$s</span>
 						</div>
@@ -55,7 +54,7 @@
 					</div>
 				</div>',
 				wp_kses_post( get_the_title() ),
-				esc_html( $job ),
+				wp_kses_post( $image_html ),
 				$linkedin_html, // phpcs:ignore
 				get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
 				wp_trim_words( wpautop( get_the_content() ), 60, '...' ), // phpcs:ignore

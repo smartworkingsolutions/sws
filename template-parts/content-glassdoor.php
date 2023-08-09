@@ -29,6 +29,9 @@
 			if ( $featured_img_url ) {
 				$image_html = '<img class="w-[60px] h-[60px] object-cover" src="' . $featured_img_url . '">';
 			}
+			if ( $featured_img_url ) {
+				$image_html = '<img class="h-8" src="' . $featured_img_url . '">';
+			}
 			if ( $linkedin ) {
 				$linkedin_html = sprintf(
 					'<a href="%s">%s</a>',

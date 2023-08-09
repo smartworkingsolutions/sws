@@ -284,8 +284,11 @@ function modify_archive_query( $query ) {
 	}
 	// Testimonials.
 	if ( $query->is_main_query() && ! is_admin() && is_post_type_archive( 'testimonials' ) ) {
-		$post_num = get_field( 'number_of_reviews', 'option' ) ? get_field( 'number_of_reviews', 'option' ) : '6';
+		$post_num     = get_field( 'number_of_reviews', 'option' ) ? get_field( 'number_of_reviews', 'option' ) : '6';
+		$testimonials = get_field( 'select_reviews', 'option' );
 		$query->set( 'posts_per_page', $post_num );
+		$query->set( 'post__in', $testimonials );
+		$query->set( 'orderby', 'post__in' );
 	}
 
 	return $query;
