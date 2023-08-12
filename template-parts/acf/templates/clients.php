@@ -19,17 +19,17 @@ $logos      = get_sub_field( 'add_logos' );
 	}
 
 	if ( $logos ) {
-		echo '<div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-5 mt-10 lg:mt-14">';
+		echo '<div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-5 mt-10 lg:mt-14">';
 		foreach ( $logos as $logo ) {
 			printf(
-				'<div class="w-full grid place-content-center aspect-square bg-white rounded-14">
+				'<div class="w-full grid place-content-center aspect-square bg-white rounded-14 p-3">
 					%s
 				</div>',
 				wp_get_attachment_image(
 					$logo,
 					'full',
 					true,
-					[ 'class' => 'w-full object-scale-down' ]
+					[ 'class' => 'w-full object-scale-down grayscale' ]
 				)
 			);
 		}

@@ -22,6 +22,9 @@ p.small {
 .blue-on-link strong {
     @apply text-blue-light;
 }
+.blue-on-link.testi p {
+    @apply text-base;
+}
 .sub-menu::before {
     @apply content-[''] bg-transparent w-full h-8 absolute -top-8 left-0;
 }
@@ -45,9 +48,6 @@ p.small {
 }
 
 /* Slider */
-/* .hero-slider .slick-track {
-    @apply grid xl:grid-cols-3 gap-8;
-} */
 .profile-slider .slick-slide,
 .testimonial-slider .slick-slide,
 .clients-slider .slick-slide {
@@ -58,6 +58,17 @@ p.small {
 .clients-slider .slick-list {
     @apply -mx-4;
 }
+
+ /* dots */
+ .slick-dots {
+    @apply flex justify-center gap-3 mt-10;
+ }
+ .slick-dots button {
+    @apply indent-[9999px] w-3 h-3 bg-black/30 rounded-full;
+ }
+ .slick-dots .slick-active button {
+    @apply bg-blue-light;
+ }
 
 /* Util */
 .plc {

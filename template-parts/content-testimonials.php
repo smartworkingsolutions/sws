@@ -50,14 +50,14 @@
 					</div>
 					<div class="md:col-span-8 xl:col-span-9 grid gap-4">
 						%4$s
-						<div class="text-base">%5$s</div>
+						<div class="blue-on-link testi">%5$s</div>
 					</div>
 				</div>',
 				wp_kses_post( get_the_title() ),
 				wp_kses_post( $image_html ),
 				$linkedin_html, // phpcs:ignore
 				get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
-				wp_trim_words( wpautop( get_the_content() ), 60, '...' ), // phpcs:ignore
+				html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ) // phpcs:ignore
 			);
 
 		endwhile;
