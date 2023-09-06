@@ -30,7 +30,7 @@ class SWS_Actions {
 	 * Prints HTML of title section after header.
 	 */
 	public function get_after_header() {
-		if ( is_page_template( 'page-acf-no-title.php' ) || is_front_page() || is_singular( 'testimonials' ) || has_post_parent() ) {
+		if ( is_page_template( 'page-acf-no-title.php' ) || is_page_template( 'page-acf-landing.php' ) || is_front_page() || is_singular( 'testimonials' ) || has_post_parent() ) {
 			return;
 		}
 

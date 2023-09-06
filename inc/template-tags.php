@@ -232,6 +232,9 @@ endif;
  * Prints HTML of header.
  */
 function theme_header_html() {
+	if ( is_page_template( 'page-acf-landing.php' ) ) {
+		return;
+	}
 	?>
 
 	<?php
@@ -303,7 +306,7 @@ function theme_footer_html() {
 
 	<?php
 	theme_copyrights_html();
-	theme_back_to_top();
+	// theme_back_to_top();
 }
 
 /**

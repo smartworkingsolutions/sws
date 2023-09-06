@@ -37,7 +37,7 @@ $logos      = get_sub_field( 'add_logos' );
 		// Extra link in last item.
 		if ( $extra_link ) {
 			printf(
-				'<a href="%s" class="col-span-2 w-full grid place-content-center text-center text-lg font-bold uppercase bg-white rounded-14 px-4" target="%s">%s</a>',
+				'<a href="%s" class="col-span-2 w-full grid place-content-center text-center text-2xl font-bold uppercase bg-white rounded-14 px-4" target="%s">%s</a>',
 				esc_url( $extra_link['url'] ),
 				esc_html( $extra_link['target'] ),
 				esc_html( $extra_link['title'] )

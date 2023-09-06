@@ -264,12 +264,25 @@ function add_googleanalytics() {
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-MH6R78TJ');</script>
 	<!-- End Google Tag Manager -->
+
+	<!-- Hotjar Tracking Code for https://smartworking-solutions.com/ -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:2943394,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+	<!-- End Hotjar Tracking Code -->
 	<?php
 }
 add_action( 'wp_head', 'add_googleanalytics' );
 
 /**
- * This will add Google Tag Manager into head.
+ * This will add Google Tag Manager into after closing body tag.
  */
 function add_googleanalytics_noscript() {
 	?>
@@ -280,6 +293,28 @@ function add_googleanalytics_noscript() {
 	<?php
 }
 add_action( 'wp_body_open', 'add_googleanalytics_noscript' );
+
+/**
+ * This will add Tawk.to into before closing body tag.
+ */
+function add_tawk() {
+	?>
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/64ef4651b2d3e13950ecf7a3/1h93alc2b';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+	<?php
+}
+add_action( 'wp_footer', 'add_tawk' );
 
 /**
  * Modifies the custom posts type query.
