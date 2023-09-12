@@ -43,7 +43,7 @@ if ( ! $heading && ! $image && ! $caption && ! $button && ! $pics && ! have_rows
 					if ( $list ) {
 						printf(
 							'<li class="flex items-center gap-4 text-2xl 3xl:text-3xl font-medium">
-								<span class="w-8 h-8 grid place-content-center bg-blue-light text-xl text-white rounded-full">%s</span>
+								<span class="w-8 h-8 grid place-content-center bg-blue-light text-xl text-white rounded-full shrink-0">%s</span>
 								%s
 							</li>',
 							esc_html( $list_count ),

@@ -15,6 +15,7 @@ function sws_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->add_setting( 'footer_logo' );
+	$wp_customize->add_setting( 'landing_logo' );
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -42,6 +43,20 @@ function sws_customize_register( $wp_customize ) {
 				'description' => 'This logo will show on Footer.',
 				'section'     => 'title_tagline',
 				'settings'    => 'footer_logo',
+				'priority'    => 8,
+			]
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'landing_logo',
+			[
+				'label'       => 'Landing Page Logo',
+				'description' => 'This logo will show on Landing page.',
+				'section'     => 'title_tagline',
+				'settings'    => 'landing_logo',
 				'priority'    => 8,
 			]
 		)

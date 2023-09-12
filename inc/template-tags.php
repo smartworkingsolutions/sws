@@ -21,16 +21,23 @@ function theme_logo( $loc = '' ) {
 		$image          = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 		$image_url      = $image[0];
 		$footer_logo    = get_theme_mod( 'footer_logo' );
+		$landing_logo   = get_theme_mod( 'landing_logo' );
+		$class          = 'max-h-5';
 
 		if ( 'footer' === $loc ) {
 			$image_url = $footer_logo;
 		}
+		if ( 'landing' === $loc ) {
+			$image_url = $landing_logo;
+			$class     = 'max-h-6';
+		}
 
 		printf(
 			'<a href="%s" rel="home">
-				<img class="max-h-5" src="%s">
+				<img class="%s" src="%s">
 			</a>',
 			esc_url( get_home_url() ),
+			esc_html( $class ),
 			esc_url( $image_url )
 		);
 	} else {

@@ -9,7 +9,7 @@ $columns     = get_sub_field( 'columns' );
 $heading     = get_sub_field( 'heading' );
 $classes     = ' xl:grid-cols-3';
 $text_class  = '';
-$title_class = ' 3xl:text-58 3xl:leading-tight';
+$title_class = ' 3xl:text-[50px] 3xl:leading-tight';
 
 if ( '4' === $columns ) {
 	$classes     = ' xl:grid-cols-4';

@@ -43,6 +43,7 @@ if ( ! $testimonials ) {
 
 		$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 		$job              = get_field( 'job', get_the_ID() );
+		$pic              = get_field( 'pic', get_the_ID() );
 		$image_html       = '';
 		$linkedin         = get_field( 'linkedin', get_the_ID() );
 		$linkedin_html    = '';
@@ -50,9 +51,12 @@ if ( ! $testimonials ) {
 		if ( $featured_img_url ) {
 			$image_html = '<img class="h-14" src="' . $featured_img_url . '">';
 		}
+		if ( $pic ) {
+			$pic = '<img class="w-12 h-12 object-cover rounded-full border border-neutral-200 grayscale" src="' . $pic . '" alt="Author pic">';
+		}
 		if ( $linkedin ) {
 			$linkedin_html = sprintf(
-				'<a href="%s">%s</a>',
+				'<a href="%s" target="_blank" class="text-[#0a66c2]">%s</a>',
 				$linkedin,
 				get_svg( 'icons/linkedin-blue', false )
 			);
@@ -63,32 +67,32 @@ if ( ! $testimonials ) {
 
 			<?php
 			printf(
-				'<a class="text-text-color" href="%1$s">
+				'<div class="text-text-color">
 					<div class="flex justify-between items-center gap-4 mb-6">
 						%8$s
-						<span>%9$s</span>
+						<span class="flex items-center gap-1">%9$s</span>
 					</div>
 					<div class="blue-on-link | text-22 line-clamp-6">%2$s</div>
 					<div class="w-full border-t border-border-color mt-2.5"></div>
-					<div class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5 fill-text-color">%3$s%4$s</div>
+					<a href="%1$s" class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5 fill-text-color">%3$s%4$s</a>
 					
 					<div class="flex justify-between items-center gap-4 mt-9">
 						<div class="grid gap-2.5">
 							<h3 class="text-lg font-extrabold">%5$s</h3>
-							<p class="small">%6$s</p>
+							%6$s
 						</div>
 						%7$s
 					</div>
-				</a>',
+				</div>',
 				esc_url( get_the_permalink() ),
 				html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ), // phpcs:ignore
 				esc_html__( 'Read more', 'sws' ),
 				get_svg( 'icons/button-arrow-small', false ), // phpcs:ignore
 				wp_kses_post( get_the_title() ),
-				esc_html( $job ),
+				$linkedin_html, // phpcs:ignore
 				wp_kses_post( $image_html ),
 				get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
-				$linkedin_html, // phpcs:ignore
+				wp_kses_post( $pic )
 			);
 			?>
 
