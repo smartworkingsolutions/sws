@@ -5,9 +5,9 @@
  * @package SWS
  */
 
-$heading    = get_sub_field( 'heading' );
-$extra_link = get_sub_field( 'extra_link' );
-$logos      = get_sub_field( 'add_logos' );
+$heading   = get_sub_field( 'heading' );
+$more_text = get_sub_field( 'more_text' );
+$logos     = get_sub_field( 'add_logos' );
 ?>
 
 <section class="w-full">
@@ -35,13 +35,8 @@ $logos      = get_sub_field( 'add_logos' );
 		}
 
 		// Extra link in last item.
-		if ( $extra_link ) {
-			printf(
-				'<a href="%s" class="col-span-2 w-full grid place-content-center text-center text-2xl font-bold uppercase bg-white rounded-14 px-4" target="%s">%s</a>',
-				esc_url( $extra_link['url'] ),
-				esc_html( $extra_link['target'] ),
-				esc_html( $extra_link['title'] )
-			);
+		if ( $more_text ) {
+			echo '<div class="col-span-2 w-full grid place-content-center text-center text-2xl font-bold uppercase bg-white rounded-14 px-4">' . esc_html( $more_text ) . '</div>';
 		}
 		echo '</div>';
 	}

@@ -192,5 +192,5 @@ p.small {
     @apply rounded-none bg-transparent border-0 border-b border-white outline-none placeholder:text-white/80 text-white focus:border-blue-light focus:outline-none focus:ring-0 px-0;
 }
 .contact-form textarea {
-    @apply max-h-32;
+    @apply max-h-28;
 }

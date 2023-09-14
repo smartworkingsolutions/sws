@@ -13,15 +13,15 @@ $btn       = get_sub_field( 'button' );
 $shortcode = get_sub_field( 'form_shortcode' );
 ?>
 
-<section class="w-full min-h-[722px] grid items-center relative">
+<section class="w-full min-h-[620px] grid items-center relative px-10">
 	<?php
 	if ( $bg ) {
 		echo '<img class="w-full h-full absolute inset-0 object-cover" src="' . esc_url( $bg ) . '" alt="Background Image">';
 	}
 	?>
-	<div class="container">
-		<div class="grid lg:grid-cols-12 gap-10 items-center">
-			<div class="lg:col-span-7 text-center lg:text-left">
+	<!-- <div class="container"> -->
+		<div class="grid lg:flex lg:justify-between gap-10 items-center">
+			<div class="text-center lg:text-left lg:max-w-2xl">
 			<?php
 			if ( $is_logo || $heading || $content || $btn ) {
 				if ( $is_logo ) {
@@ -52,7 +52,7 @@ $shortcode = get_sub_field( 'form_shortcode' );
 			</div>
 
 			<!-- Form only show on large screens -->
-			<div class="lg:col-span-5 hidden lg:grid text-white bg-dark-color p-6 relative">
+			<div class="hidden lg:grid max-w-lg text-white bg-dark-color p-6 relative">
 				<?php
 				if ( $shortcode ) {
 					echo do_shortcode( $shortcode );
@@ -60,7 +60,7 @@ $shortcode = get_sub_field( 'form_shortcode' );
 				?>
 			</div>
 		</div>
-	</div>
+	<!-- </div> -->
 </section>
 
 <div class="container lg:hidden">

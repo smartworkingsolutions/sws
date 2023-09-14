@@ -1557,10 +1557,10 @@
                         },
                         {
                             "key": "field_642712a94f5b8",
-                            "label": "Extra Link(Optional)",
-                            "name": "extra_link",
+                            "label": "More Text",
+                            "name": "more_text",
                             "aria-label": "",
-                            "type": "link",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1569,7 +1569,12 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "acfe_save_meta": 0,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -2492,5 +2497,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694454403
+    "modified": 1694723441
 }

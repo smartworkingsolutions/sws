@@ -52,7 +52,7 @@ if ( ! $testimonials ) {
 			$image_html = '<img class="h-14" src="' . $featured_img_url . '">';
 		}
 		if ( $pic ) {
-			$pic = '<img class="w-12 h-12 object-cover rounded-full border border-neutral-200 grayscale" src="' . $pic . '" alt="Author pic">';
+			$pic = '<img class="w-16 h-16 object-cover rounded-full border border-neutral-200 grayscale" src="' . $pic . '" alt="Author pic">';
 		}
 		if ( $linkedin ) {
 			$linkedin_html = sprintf(
