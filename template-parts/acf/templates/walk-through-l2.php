@@ -5,10 +5,11 @@
  * @package SWS
  */
 
-$heading    = get_sub_field( 'heading' );
-$button     = get_sub_field( 'button' );
-$pics       = get_sub_field( 'add_pics' );
-$list_count = 1;
+$heading     = get_sub_field( 'heading' );
+$button      = get_sub_field( 'button' );
+$pics        = get_sub_field( 'add_pics' );
+$list_count1 = 1;
+$list_count2 = 1;
 
 if ( ! $heading && ! $button && ! $pics && ! have_rows( 'add_lists' ) ) {
 	return;
@@ -25,6 +26,36 @@ if ( ! $heading && ! $button && ! $pics && ! have_rows( 'add_lists' ) ) {
 			if ( $heading ) {
 				echo '<h3 class="text-4xl lg:text-5xl 3xl:text-6xl font-medium mb-2">' . esc_html( $heading ) . '</h3>';
 			}
+
+			// Lists only show on mobile screen.
+			if ( have_rows( 'add_lists' ) ) {
+				echo '<ul class="grid gap-6 xl:hidden">';
+
+				// Loop through rows.
+				while ( have_rows( 'add_lists' ) ) :
+					the_row();
+
+					// Load sub field value.
+					$list = get_sub_field( 'list' );
+
+					if ( $list ) {
+						printf(
+							'<li class="flex items-center gap-4 text-2xl 3xl:text-3xl font-medium">
+								<span class="w-8 h-8 grid place-content-center bg-blue-light text-xl text-white rounded-full shrink-0">%s</span>
+								%s
+							</li>',
+							esc_html( $list_count1 ),
+							wp_kses_post( $list )
+						);
+					}
+					++$list_count1;
+
+				endwhile;
+
+				echo '</ul>';
+			}
+
+			// Faces.
 			if ( $pics ) {
 				echo '<div class="flex ml-6">';
 				foreach ( $pics as $pic ) {
@@ -55,7 +86,7 @@ if ( ! $heading && ! $button && ! $pics && ! have_rows( 'add_lists' ) ) {
 			<?php
 			// Lists.
 			if ( have_rows( 'add_lists' ) ) {
-				echo '<ul class="grid gap-6">';
+				echo '<ul class="hidden xl:grid gap-6">';
 
 				// Loop through rows.
 				while ( have_rows( 'add_lists' ) ) :
@@ -70,11 +101,11 @@ if ( ! $heading && ! $button && ! $pics && ! have_rows( 'add_lists' ) ) {
 								<span class="w-8 h-8 grid place-content-center bg-blue-light text-xl text-white rounded-full shrink-0">%s</span>
 								%s
 							</li>',
-							esc_html( $list_count ),
+							esc_html( $list_count2 ),
 							wp_kses_post( $list )
 						);
 					}
-					++$list_count;
+					++$list_count2;
 
 				endwhile;
 

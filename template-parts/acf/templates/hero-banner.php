@@ -9,13 +9,17 @@ $bg         = get_sub_field( 'background_image' );
 $heading    = get_sub_field( 'heading' );
 $subheading = get_sub_field( 'sub_heading' );
 $btn        = get_sub_field( 'button' );
+$background = '';
 
 if ( ! is_front_page() ) {
 	$heading = __( 'Hire Best-in-Class Remote<br>', 'sws' ) . get_the_title();
 }
+if ( ! $bg ) {
+	$background = ' bg-blue-dark';
+}
 ?>
 
-<section class="w-full min-h-[722px] grid place-content-center bg-blue-dark text-center relative">
+<section class="w-full min-h-[722px] grid place-content-center<?php echo esc_html( $background ); ?> text-center relative">
 	<?php
 	if ( $bg ) {
 		echo '<img class="w-full h-full absolute inset-0 object-cover" src="' . esc_url( $bg ) . '" alt="Background Image">';

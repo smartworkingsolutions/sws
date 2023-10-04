@@ -13,13 +13,15 @@ $btn       = get_sub_field( 'button' );
 $shortcode = get_sub_field( 'form_shortcode' );
 ?>
 
-<section class="w-full min-h-[620px] grid items-center relative px-10">
+<section class="w-full aspect-[5/2.4] grid items-center relative px-10">
+<!-- <section class="w-full min-h-[620px] xl:min-h-[700px] grid items-center relative px-10"> -->
 	<?php
 	if ( $bg ) {
-		echo '<img class="w-full h-full absolute inset-0 object-cover" src="' . esc_url( $bg ) . '" alt="Background Image">';
+		echo '<img class="w-full aspect-[5/2.4] absolute inset-0 object-cover" src="' . esc_url( $bg ) . '" alt="Background Image">';
+		// echo '<img class="w-full h-full 2xl:h-auto absolute inset-0 object-cover" src="' . esc_url( $bg ) . '" alt="Background Image">';
 	}
 	?>
-	<!-- <div class="container"> -->
+	<div class="container">
 		<div class="grid lg:flex lg:justify-between gap-10 items-center">
 			<div class="text-center lg:text-left lg:max-w-2xl">
 			<?php
@@ -60,7 +62,8 @@ $shortcode = get_sub_field( 'form_shortcode' );
 				?>
 			</div>
 		</div>
-	<!-- </div> -->
+	</div>
+	<div class="down-arrow | w-10 h-10 text-white absolute bottom-10 left-1/2 -ml-5 z-10"><?php get_svg( 'icons/arrow-down' ); ?></div>
 </section>
 
 <div class="container lg:hidden">

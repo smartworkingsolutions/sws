@@ -23,7 +23,22 @@ class SWS_Actions {
 	 * Hooks and Filters.
 	 */
 	public function hooks() {
-		add_action( 'sws_after_header', [ $this, 'get_after_header' ], 10 );
+		add_action( 'sws_after_header', [ $this, 'set_modal' ], 10 );
+		add_action( 'sws_after_header', [ $this, 'get_after_header' ], 20 );
+	}
+
+	/**
+	 * Prints HTML of Modal.
+	 */
+	public function set_modal() {
+		$form_shortcode = get_field( 'contact_form_shortcode', 'option' );
+		if ( is_page_template( 'page-acf-landing.php' ) ) {
+			$form_shortcode = get_field( 'contact_form_shortcode_landing', 'option' );
+		}
+		if ( $form_shortcode ) {
+			echo '<div class="contact-form | w-11/12 md:w-1/2 lg:w-1/3 bg-dark-color text-white p-10 fixed left-1/2 -translate-x-1/2 -top-full z-40"><div class="close | w-8 h-8 bg-white text-dark-color stroke-black grid place-content-center absolute top-1 right-1 cursor-pointer">' . get_svg( 'icons/close', false ) . '</div>' . do_shortcode( $form_shortcode ) . '</div>'; // phpcs:ignore
+			echo '<div class="modal-overlay | w-full h-full fixed inset-0 z-20 bg-black/30 hidden"></div>';
+		}
 	}
 
 	/**

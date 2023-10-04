@@ -51,7 +51,7 @@ class Svg_Enable {
 	 *
 	 * @param array $mimes default.
 	 */
-	public function cc_mime_types( $mimes ){
+	public function cc_mime_types( $mimes ) {
 		$mimes['svg'] = 'image/svg+xml';
 		return $mimes;
 	}

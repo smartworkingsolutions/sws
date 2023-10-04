@@ -27,8 +27,6 @@ jQuery(document).ready(function() {
 		});
 	}
 
-    
-
 	// Button append to mobile menu.
 	jQuery('.header-buttons')
 	.clone()
@@ -141,9 +139,13 @@ jQuery(document).ready(function() {
 jQuery(document).ready(function() {
 	// Get the button:
 	let topButton = jQuery('.back-to-top');
+	let downArrow = jQuery('.down-arrow');
 
 	// When the user scrolls down 200px from the top of the document, show the button
-	window.onscroll = function() {scrollFunction()};
+	window.onscroll = function() {
+		scrollFunction()
+		scrollFunctionArrow()
+	};
 
 	function scrollFunction() {
 		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -154,4 +156,33 @@ jQuery(document).ready(function() {
 			topButton.removeClass('grid');
 		}
 	}
+	function scrollFunctionArrow() {
+		if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+			downArrow.addClass('hidden');
+		} else {
+			downArrow.removeClass('hidden');
+		}
+	}
+
+	// Contact form modal
+	const btn = jQuery("a[href^='#modal']");
+	const form = jQuery(".contact-form");
+	const overlay = jQuery(".modal-overlay");
+	const close = jQuery(".contact-form .close");
+
+	// Search box
+	btn.click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		form.removeClass("-top-full");
+		overlay.removeClass("hidden");
+	});
+	overlay.click(function() {
+		form.addClass("-top-full");
+		overlay.addClass("hidden");
+	});
+	close.click(function() {
+		form.addClass("-top-full");
+		overlay.addClass("hidden");
+	});
 });

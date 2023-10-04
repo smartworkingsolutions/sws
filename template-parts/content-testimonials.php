@@ -21,12 +21,16 @@
 			the_post();
 
 			$featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+			$pic              = get_field( 'pic', get_the_ID() );
 			$linkedin         = get_field( 'linkedin', get_the_ID() );
 			$image_html       = '';
 			$linkedin_html    = '';
 
 			if ( $featured_img_url ) {
 				$image_html = '<img class="h-10 mt-2.5" src="' . $featured_img_url . '">';
+			}
+			if ( $pic ) {
+				$pic = '<img class="w-12 h-12 object-cover rounded-full border border-neutral-200 grayscale" src="' . $pic . '" alt="Author pic">';
 			}
 			if ( $linkedin ) {
 				$linkedin_html = sprintf(
@@ -49,14 +53,15 @@
 						<span class="md:hidden ml-auto">%3$s</span>
 					</div>
 					<div class="md:col-span-8 xl:col-span-9 grid gap-4">
-						%4$s
-						<div class="blue-on-link testi">%5$s</div>
+						<div class="flex justify-between gap-6">%4$s%5$s</div>
+						<div class="blue-on-link testi">%6$s</div>
 					</div>
 				</div>',
 				wp_kses_post( get_the_title() ),
 				wp_kses_post( $image_html ),
 				$linkedin_html, // phpcs:ignore
 				get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
+				wp_kses_post( $pic ),
 				html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ) // phpcs:ignore
 			);
 
