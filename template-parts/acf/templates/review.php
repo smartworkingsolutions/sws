@@ -29,8 +29,8 @@ if ( ! have_rows( 'add_review' ) ) {
 				<h3 class="text-32 font-bold">%s</h3>
 				<p class="text-white">%s</p>
 			</div>',
-			esc_html( $review_title ),
-			wp_kses_post( $review_content )
+			do_shortcode( $review_title ),
+			do_shortcode( $review_content )
 		);
 
 	endwhile;

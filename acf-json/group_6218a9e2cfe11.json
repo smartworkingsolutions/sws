@@ -120,6 +120,28 @@
                             "new_lines": "br"
                         },
                         {
+                            "key": "field_651f069e1fd3f",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "default_value": "Interviewed, vetted and tested. Ready for your recruitment process.",
+                            "acfe_textarea_code": 0,
+                            "maxlength": "",
+                            "rows": 6,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
                             "key": "field_6218f5f9f9c16",
                             "label": "Button",
                             "name": "button",
@@ -223,12 +245,34 @@
                             "maxlength": "",
                             "rows": 4,
                             "placeholder": "",
-                            "new_lines": ""
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_64ff51c638c91",
                             "label": "Content",
                             "name": "content",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "default_value": "",
+                            "acfe_textarea_code": 0,
+                            "maxlength": "",
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_6526f68343397",
+                            "label": "Content 2",
+                            "name": "content_2",
                             "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
@@ -331,7 +375,7 @@
                                     "label": "Title",
                                     "name": "title",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -342,10 +386,11 @@
                                     },
                                     "acfe_save_meta": 0,
                                     "default_value": "",
+                                    "acfe_textarea_code": 0,
                                     "maxlength": "",
+                                    "rows": 4,
                                     "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
+                                    "new_lines": "br",
                                     "parent_repeater": "field_64f0d7a248b9e"
                                 },
                                 {
@@ -1036,7 +1081,7 @@
                             "label": "Heading",
                             "name": "heading",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1047,10 +1092,11 @@
                             },
                             "acfe_save_meta": 0,
                             "default_value": "",
+                            "acfe_textarea_code": 0,
                             "maxlength": "",
+                            "rows": 4,
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": ""
                         },
                         {
                             "key": "field_64fa10adc9a07",
@@ -2497,5 +2543,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1694723441
+    "modified": 1697052313
 }

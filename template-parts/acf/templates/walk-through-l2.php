@@ -24,7 +24,7 @@ if ( ! $heading && ! $button && ! $pics && ! have_rows( 'add_lists' ) ) {
 			<?php
 			echo '<div class="grid gap-8">';
 			if ( $heading ) {
-				echo '<h3 class="text-4xl lg:text-5xl 3xl:text-6xl font-medium mb-2">' . esc_html( $heading ) . '</h3>';
+				echo '<h3 class="text-4xl lg:text-5xl 3xl:text-6xl font-medium mb-2">' . do_shortcode( $heading ) . '</h3>';
 			}
 
 			// Lists only show on mobile screen.
