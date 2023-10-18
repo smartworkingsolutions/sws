@@ -29,13 +29,13 @@ $shortcode = get_sub_field( 'form_shortcode' );
 			if ( $heading || $content || $btn ) {
 				echo '<div class="grid gap-8 relative z-10">';
 				if ( $heading ) {
-					echo '<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">' . wp_kses_post( $heading ) . '</h1>';
+					echo '<h1 class="text-3xl sm:text-4xl lg:text-5xl 3xl:text-6xl font-semibold leading-tight">' . wp_kses_post( $heading ) . '</h1>';
 				}
 				if ( $content ) {
-					echo '<p class="flex items-start gap-3"><span class="w-5 h-5 grid rounded-full bg-blue-light mt-1.5 shrink-0"></span>' . do_shortcode( $content ) . '</p>';
+					echo '<p class="flex items-start gap-3"><span class="w-5 h-5 text-blue-light mt-1 shrink-0">' . get_svg( 'icons/tick', false ) . '</span>' . do_shortcode( $content ) . '</p>'; //phpcs:ignore
 				}
 				if ( $content2 ) {
-					echo '<p class="flex items-start gap-3"><span class="w-5 h-5 grid rounded-full bg-blue-light mt-1.5 shrink-0"></span>' . do_shortcode( $content2 ) . '</p>';
+					echo '<p class="flex items-start gap-3"><span class="w-5 h-5 text-blue-light mt-1 shrink-0">' . get_svg( 'icons/tick', false ) . '</span>' . do_shortcode( $content2 ) . '</p>'; //phpcs:ignore
 				}
 				if ( $btn ) {
 					printf(

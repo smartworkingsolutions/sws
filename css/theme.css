@@ -1664,6 +1664,9 @@ label {
     width: -moz-max-content;
     width: max-content;
 }
+.w-6 {
+    width: 1.5rem;
+}
 .max-w-3xl {
     max-width: 48rem;
 }
@@ -1779,9 +1782,6 @@ label {
 }
 .gap-2\.5 {
     gap: 0.625rem;
-}
-.gap-20 {
-    gap: 5rem;
 }
 .gap-3 {
     gap: 0.75rem;
@@ -2078,10 +2078,6 @@ label {
     padding-top: 2.25rem;
     padding-bottom: 2.25rem;
 }
-.py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
 .pb-14 {
     padding-bottom: 3.5rem;
 }
@@ -2221,6 +2217,9 @@ label {
 }
 .text-white\/80 {
     color: rgb(255 255 255 / 0.8);
+}
+.text-blue-light {
+    color: var(--color-blue-light);
 }
 .underline {
     text-decoration-line: underline;
@@ -2500,10 +2499,6 @@ label {
     .md\:p-8 {
         padding: 2rem;
     }
-    .md\:py-20 {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
     .md\:py-28 {
         padding-top: 7rem;
         padding-bottom: 7rem;
@@ -2719,10 +2714,18 @@ label {
         font-size: 1.5rem;
         line-height: 2rem;
     }
+    .xl\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
 }
 @media (min-width: 1440px) {
     .\32xl\:h-auto {
         height: auto;
+    }
+    .\32xl\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
     }
 }
 @media (min-width: 1600px) {
