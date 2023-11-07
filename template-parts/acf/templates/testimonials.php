@@ -69,30 +69,25 @@ if ( ! $testimonials ) {
 			printf(
 				'<div class="text-text-color">
 					<div class="flex justify-between items-center gap-4 mb-6">
-						%8$s
-						<span class="flex items-center gap-1">%9$s</span>
+						%1$s
+						<span class="flex items-center gap-1">%2$s</span>
 					</div>
-					<div class="blue-on-link | text-22 line-clamp-6">%2$s</div>
+					<div class="blue-on-link | text-22 line-clamp-6">%3$s</div>
 					<div class="w-full border-t border-border-color mt-2.5"></div>
-					<a href="%1$s" class="flex items-center gap-2.5 text-xs font-bold uppercase mt-5 fill-text-color">%3$s%4$s</a>
-					
 					<div class="flex justify-between items-center gap-4 mt-9">
 						<div class="grid gap-2.5">
-							<h3 class="text-lg font-extrabold">%5$s</h3>
-							%6$s
+							<h3 class="text-lg font-extrabold">%4$s</h3>
+							%5$s
 						</div>
-						%7$s
+						%6$s
 					</div>
 				</div>',
-				esc_url( get_the_permalink() ),
+				get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
+				wp_kses_post( $pic ),
 				html_entity_decode( wp_trim_words( htmlentities( wpautop( get_the_content() ) ), 60, '...' ) ), // phpcs:ignore
-				esc_html__( 'Read more', 'sws' ),
-				get_svg( 'icons/button-arrow-small', false ), // phpcs:ignore
 				wp_kses_post( get_the_title() ),
 				$linkedin_html, // phpcs:ignore
-				wp_kses_post( $image_html ),
-				get_svg( 'icons/glassdoor-rating', false ), // phpcs:ignore
-				wp_kses_post( $pic )
+				wp_kses_post( $image_html )
 			);
 			?>
 

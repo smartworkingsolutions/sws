@@ -195,8 +195,11 @@ p.small {
     @apply text-text-color;
 }
 .light-form .contact-form .field {
-    @apply border-b border-text-color placeholder:text-text-color text-text-color;
+    @apply border border-text-color rounded-md placeholder:text-text-color text-text-color px-4;
 }
 .contact-form textarea {
     @apply max-h-28;
 }
+/* .animate-bounce {
+    animation-delay: 2s;
+} */
